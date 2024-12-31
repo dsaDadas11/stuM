@@ -3,11 +3,11 @@ package db;
 import java.sql.*;
 
 /**
- * 
- * Title: Êı¾İ¿âÁ¬½Ó 
- * Description: Êı¾İ¿âÁ¬½ÓÄ£¿é
- * 
- * @author »Æ²ß£¬³Â×ÓÈ¨£¬µÔÀ¥Ñó£¬ÈÄÈï
+ *
+ * Title: æ•°æ®åº“è¿æ¥
+ * Description: æ•°æ®åº“è¿æ¥æ¨¡å—
+ *
+ * @author é»„ç­–ï¼Œé™ˆå­æƒï¼Œç¿Ÿæ˜†æ´‹ï¼Œé¥¶è•Š
  */
 
 public class dbConn {
@@ -21,15 +21,15 @@ public class dbConn {
 
 	private Statement conn() {
 		try {
-			// ¼ÓÔØÇı¶¯
+			// åŠ è½½é©±åŠ¨
 			Class.forName("com.mysql.cj.jdbc.Driver");
 
-			// Êı¾İ¿âÃû³Æ£¬¹ÜÀíÔ±ÕËºÅ¡¢ÃÜÂë
+			// æ•°æ®åº“åç§°ï¼Œç®¡ç†å‘˜è´¦å·ã€å¯†ç 
 			String url = "jdbc:mysql://localhost:3306/stuManagerDB";
 			String user = "root";
 			String pwd = "123456";
 
-			// Á¬½Ó
+			// è¿æ¥
 			Connection con = null;
 			con = DriverManager.getConnection(url, user, pwd);
 			Statement stat = con.createStatement();
@@ -41,7 +41,7 @@ public class dbConn {
 		}
 	}
 
-	// ²éÑ¯Êı¾İ¿â
+	// æŸ¥è¯¢æ•°æ®åº“
 	public ResultSet getRs(String sql) {
 		try {
 			Statement stat = conn();
@@ -54,7 +54,7 @@ public class dbConn {
 		}
 	}
 
-	// ¸üĞÂÊı¾İ¿â
+	// æ›´æ–°æ•°æ®åº“
 	public int getUpdate(String sql) {
 		try {
 			Statement stat = conn();

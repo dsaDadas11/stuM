@@ -15,11 +15,11 @@ import java.util.*;
 import java.awt.*;
 
 /**
- * 
- * Title: ³É¼¨¹ÜÀí 
- * Description: ³É¼¨¹ÜÀíÄ£¿é£¬¿ÉÒÔ²éÑ¯³É¼¨£¬ÊÇ³É¼¨ĞŞ¸ÄºÍÉ¾³ıµÄÈë¿Ú¡£
- * 
- * @author »Æ²ß£¬³Â×ÓÈ¨£¬µÔÀ¥Ñó£¬ÈÄÈï
+ *
+ * Title: æˆç»©ç®¡ç†
+ * Description: æˆç»©ç®¡ç†æ¨¡å—ï¼Œå¯ä»¥æŸ¥è¯¢æˆç»©ï¼Œæ˜¯æˆç»©ä¿®æ”¹å’Œåˆ é™¤çš„å…¥å£ã€‚
+ *
+ * @author é»„ç­–ï¼Œé™ˆå­æƒï¼Œç¿Ÿæ˜†æ´‹ï¼Œé¥¶è•Š
  */
 
 public class ScoreManager extends JFrame {
@@ -39,7 +39,7 @@ public class ScoreManager extends JFrame {
 	dbConn sta = new dbConn();
 	String sql;
 	Object[][] arrData = {};
-	String[] arrField = { "³É¼¨±àºÅ", "Ñ§ÉúÑ§ºÅ", "ĞÕÃû", "¿Î³Ì", "·ÖÊı" };
+	String[] arrField = { "æˆç»©ç¼–å·", "å­¦ç”Ÿå­¦å·", "å§“å", "è¯¾ç¨‹", "åˆ†æ•°" };
 	DefaultTableModel model = new DefaultTableModel();
 	int intRow;
 	static int find;
@@ -58,33 +58,33 @@ public class ScoreManager extends JFrame {
 	private void jbInit() throws Exception {
 		getContentPane().setLayout(xYLayout1);
 		jLabel1.setFont(new java.awt.Font("Dialog", Font.BOLD, 20));
-		jLabel1.setText("³É  ¼¨  ¹Ü  Àí");
+		jLabel1.setText("æˆ  ç»©  ç®¡  ç†");
 		jScrollPane1.setBorder(BorderFactory.createEtchedBorder());
 		jButton1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jButton1.setText("ĞŞ   ¸Ä");
+		jButton1.setText("ä¿®   æ”¹");
 		jButton1.addActionListener(new ScoreF_jButton1_actionAdapter(this));
 		jButton2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jButton2.setText("·µ   »Ø");
+		jButton2.setText("è¿”   å›");
 		jButton2.addActionListener(new ScoreF_jButton2_actionAdapter(this));
 		jPanel1.setLayout(xYLayout2);
 		jPanel1.setBorder(BorderFactory.createEtchedBorder());
 		xYLayout1.setWidth(550);
 		xYLayout1.setHeight(560);
 		jButton_print.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
-		jButton_print.setText("´ò  Ó¡");
+		jButton_print.setText("æ‰“  å°");
 		jButton_print.addActionListener(new ScoreManager_jButton_print_actionAdapter(this));
 		jButton_sort.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
-		jButton_sort.setText("ÅÅ  Ğò");
+		jButton_sort.setText("æ’  åº");
 		jButton_sort.addActionListener(new ScoreManager_jButton_sort_actionAdapter(this));
 		jButton_average.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
-		jButton_average.setText("Æ½  ¾ù");
+		jButton_average.setText("å¹³  å‡");
 		jButton_average.addActionListener(new ScoreManager_jButton_average_actionAdapter(this));
 		jButton_failure.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
-		jButton_failure.setText("²»¼°¸ñ");
+		jButton_failure.setText("ä¸åŠæ ¼");
 		jButton_failure.addActionListener(new ScoreManager_jButton_failure_actionAdapter(this));
-		this.setTitle("³É¼¨¹ÜÀí");
+		this.setTitle("æˆç»©ç®¡ç†");
 		jButton6.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jButton6.setText("É¾   ³ı");
+		jButton6.setText("åˆ    é™¤");
 		jButton6.addActionListener(new ScoreF_jButton6_actionAdapter(this));
 		jScrollPane1.getViewport().add(jTable1);
 		this.getContentPane().add(jLabel1, new XYConstraints(208, 13, 135, 43));
@@ -98,27 +98,27 @@ public class ScoreManager extends JFrame {
 		jPanel1.add(jButton_average, new XYConstraints(287, 15, 80, 25));
 		jPanel1.add(jButton_failure, new XYConstraints(419, 15, 80, 25));
 
-		// ÓÃ»§µÈ¼¶ÅĞ¶Ï
-		// 1Îª¹ÜÀíÔ±
+		// ç”¨æˆ·ç­‰çº§åˆ¤æ–­
+		// 1ä¸ºç®¡ç†å‘˜
 		if (MainFrame.level.equals("1")) {
-			// ²»Òş²ØÈÎºÎ¹¦ÄÜ
+			// ä¸éšè—ä»»ä½•åŠŸèƒ½
 		}
-		// 2ÎªÆÕÍ¨ÓÃ»§
+		// 2ä¸ºæ™®é€šç”¨æˆ·
 		else if (MainFrame.level.equals("2")) {
-			// Òş²Ø²¿·Ö¹¦ÄÜ
+			// éšè—éƒ¨åˆ†åŠŸèƒ½
 			jButton1.setVisible(false);
 			jButton6.setVisible(false);
 		}
 
-		// ÉèÖÃÄ¬ÈÏ²éÕÒËùÓĞ³É¼¨
+		// è®¾ç½®é»˜è®¤æŸ¥æ‰¾æ‰€æœ‰æˆç»©
 		sql = "select * from tb_score ";
-		// ¸üĞÂ
+		// æ›´æ–°
 		UpdateRecord();
 	}
 
-	// ²éÑ¯²¢¸üĞÂ±í¸ñ
+	// æŸ¥è¯¢å¹¶æ›´æ–°è¡¨æ ¼
 	public void UpdateRecord() {
-		Object[][] arrTmp = {}; // Éè¶¨±í¸ñµÄ×Ö¶Î
+		Object[][] arrTmp = {}; // è®¾å®šè¡¨æ ¼çš„å­—æ®µ
 		Vector vec = new Vector(1, 1);
 		model = new DefaultTableModel(arrTmp, arrField);
 		jTable1 = new JTable(model);
@@ -153,11 +153,11 @@ public class ScoreManager extends JFrame {
 		jTable1.setShowVerticalLines(true);
 	}
 
-	// Ñ¡¶¨ËùÑ¡µÄĞĞ
+	// é€‰å®šæ‰€é€‰çš„è¡Œ
 	public void getM() {
 		intRow = jTable1.getSelectedRow();
 		if (intRow == -1) {
-			jOptionPane1.showMessageDialog(this, "ÇëÑ¡ÔñÒªĞŞ¸ÄµÄ¿Î³Ì£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+			jOptionPane1.showMessageDialog(this, "è¯·é€‰æ‹©è¦ä¿®æ”¹çš„è¯¾ç¨‹ï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 			return;
 		}
 		try {
@@ -168,13 +168,13 @@ public class ScoreManager extends JFrame {
 		}
 	}
 
-	// ÍË³ö
+	// é€€å‡º
 	public void jButton2_actionPerformed(ActionEvent e) {
 		this.dispose();
 	}
 
-	// µ¥´Îµã»÷´òÓ¡¶ÔÑ§ºÅ½øĞĞÉıĞòÅÅĞò
-	// Ë«´Îµã»÷´òÓ¡¶ÔÑ§ºÅ½øĞĞÉıĞòÅÅĞò
+	// å•æ¬¡ç‚¹å‡»æ‰“å°å¯¹å­¦å·è¿›è¡Œå‡åºæ’åº
+	// åŒæ¬¡ç‚¹å‡»æ‰“å°å¯¹å­¦å·è¿›è¡Œå‡åºæ’åº
 	public void jButton_print_actionPerformed(ActionEvent e) {
 		i_print++;
 		if (i_print % 2 == 1) {
@@ -185,8 +185,8 @@ public class ScoreManager extends JFrame {
 		UpdateRecord();
 	}
 
-	// µ¥´Îµã»÷ÅÅĞò¶Ô³É¼¨½øĞĞ½µĞòÅÅĞò
-	// Ë«´Îµã»÷ÅÅĞò¶Ô³É¼¨½øĞĞÉıĞòÅÅĞò
+	// å•æ¬¡ç‚¹å‡»æ’åºå¯¹æˆç»©è¿›è¡Œé™åºæ’åº
+	// åŒæ¬¡ç‚¹å‡»æ’åºå¯¹æˆç»©è¿›è¡Œå‡åºæ’åº
 	public void jButton_sort_actionPerformed(ActionEvent e) {
 		i_sortDesc++;
 		if (i_sortDesc % 2 == 1) {
@@ -197,24 +197,24 @@ public class ScoreManager extends JFrame {
 		UpdateRecord();
 	}
 
-	// Æ½¾ù·Ö
+	// å¹³å‡åˆ†
 	public void jButton_average_actionPerformed(ActionEvent e) {
 		float f_average = 0;
 		int averageBig = 0, averageSmall = 0;
 		try {
-			// »ñµÃÆ½¾ù·Ö
+			// è·å¾—å¹³å‡åˆ†
 			ResultSet rs_average = sta.getRs("select avg(score) as scoreAverage from tb_score");
 			while (rs_average.next()) {
 				f_average = Float.valueOf(rs_average.getString("scoreAverage"));
 			}
 
-			// »ñµÃ´óÓÚµÈÓÚÆ½¾ù·ÖµÄÈËÊı
+			// è·å¾—å¤§äºç­‰äºå¹³å‡åˆ†çš„äººæ•°
 			ResultSet rs_averageBig = sta.getRs("select * from tb_score where score>='" + f_average + "'");
 			while (rs_averageBig.next()) {
 				averageBig++;
 			}
 
-			// »ñµÃĞ¡ÓÚÆ½¾ù·ÖµÄÈËÊı
+			// è·å¾—å°äºå¹³å‡åˆ†çš„äººæ•°
 			ResultSet rs_averageSmall = sta.getRs("select * from tb_score where score<'" + f_average + "'");
 			while (rs_averageSmall.next()) {
 				averageSmall++;
@@ -224,23 +224,23 @@ public class ScoreManager extends JFrame {
 			System.out.println(e1);
 		}
 
-		// ÏÔÊ¾Æ½¾ù·Ö
+		// æ˜¾ç¤ºå¹³å‡åˆ†
 		jOptionPane1.showMessageDialog(this,
-				"Æ½¾ù·Ö  = " + f_average + "\n´óÓÚµÈÓÚÆ½¾ù·ÖÓĞ " + averageBig + "ÈË\nĞ¡ÓÚÆ½¾ù·ÖÓĞ " + averageSmall + "ÈË", "ÌáÊ¾",
+				"å¹³å‡åˆ†  = " + f_average + "\nå¤§äºç­‰äºå¹³å‡åˆ†æœ‰ " + averageBig + "äºº\nå°äºå¹³å‡åˆ†æœ‰ " + averageSmall + "äºº", "æç¤º",
 				JOptionPane.INFORMATION_MESSAGE, null);
 	}
 
-	// ²»¼°¸ñ
+	// ä¸åŠæ ¼
 	public void jButton_failure_actionPerformed(ActionEvent e) {
 		int totalNumber = 0, failureNumber = 0;
 		try {
-			// »ñÈ¡×ÜÈËÊı
+			// è·å–æ€»äººæ•°
 			ResultSet rs_total = sta.getRs("select * from tb_score");
 			while (rs_total.next()) {
 				totalNumber++;
 			}
 
-			// »ñÈ¡µÍÓÚ60·Ö£¨²»¼°¸ñ£©ÈËÊı
+			// è·å–ä½äº60åˆ†ï¼ˆä¸åŠæ ¼ï¼‰äººæ•°
 			ResultSet rs_failure = sta.getRs("select * from tb_score where score<'" + 60 + "'");
 			while (rs_failure.next()) {
 				failureNumber++;
@@ -249,12 +249,12 @@ public class ScoreManager extends JFrame {
 			System.out.println(e1);
 		}
 
-		// ÏÔÊ¾²»¼°¸ñÂÊ
-		jOptionPane1.showMessageDialog(this, "²»¼°¸ñÂÊ  = " + (float) failureNumber / totalNumber * 100 + "%\n²»¼°¸ñÈËÊıÓĞ "
-				+ failureNumber + "ÈË\n×ÜÈËÊıÓĞ " + totalNumber + "ÈË", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+		// æ˜¾ç¤ºä¸åŠæ ¼ç‡
+		jOptionPane1.showMessageDialog(this, "ä¸åŠæ ¼ç‡  = " + (float) failureNumber / totalNumber * 100 + "%\nä¸åŠæ ¼äººæ•°æœ‰ "
+				+ failureNumber + "äºº\næ€»äººæ•°æœ‰ " + totalNumber + "äºº", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 	}
 
-	// ĞŞ¸Ä¿Î³Ì
+	// ä¿®æ”¹è¯¾ç¨‹
 	public void jButton1_actionPerformed(ActionEvent e) {
 		getM();
 		if (find > 0) {
@@ -268,15 +268,15 @@ public class ScoreManager extends JFrame {
 		}
 	}
 
-	// É¾³ı¿Î³Ì
+	// åˆ é™¤è¯¾ç¨‹
 	public void jButton6_actionPerformed(ActionEvent e) {
 		getM();
 		if (intRow == -1) {
-			jOptionPane1.showMessageDialog(this, "ÇëÑ¡ÔñÒªÉ¾³ıµÄ¿Î³Ì£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+			jOptionPane1.showMessageDialog(this, "è¯·é€‰æ‹©è¦åˆ é™¤çš„è¯¾ç¨‹ï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 		}
 		try {
 			sta.getUpdate("delete from tb_score where scoreId='" + Integer.valueOf(find) + "'");
-			jOptionPane1.showMessageDialog(this, "É¾³ı³É¹¦£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+			jOptionPane1.showMessageDialog(this, "åˆ é™¤æˆåŠŸï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 		} catch (Exception ce) {
 			System.out.println(ce.getMessage());
 		}

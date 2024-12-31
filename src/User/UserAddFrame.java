@@ -15,11 +15,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * 
- * Title: ÓÃ»§Ìí¼Ó 
- * Description: ÓÃ»§Ìí¼ÓÄ£¿é£¬Ö»¶Ô¹ÜÀíÔ±ÏÔÊ¾¡£
- * 
- * @author »Æ²ß£¬³Â×ÓÈ¨£¬µÔÀ¥Ñó£¬ÈÄÈï
+ *
+ * Title: ç”¨æˆ·æ·»åŠ 
+ * Description: ç”¨æˆ·æ·»åŠ æ¨¡å—ï¼Œåªå¯¹ç®¡ç†å‘˜æ˜¾ç¤ºã€‚
+ *
+ * @author é»„ç­–ï¼Œé™ˆå­æƒï¼Œç¿Ÿæ˜†æ´‹ï¼Œé¥¶è•Š
  */
 
 public class UserAddFrame extends JFrame {
@@ -48,18 +48,18 @@ public class UserAddFrame extends JFrame {
 		contentPane = (JPanel) getContentPane();
 		contentPane.setLayout(null);
 		setSize(new Dimension(469, 315));
-		setTitle("Ìí¼ÓÓÃ»§");
+		setTitle("æ·»åŠ ç”¨æˆ·");
 		jLabel1.setFont(new java.awt.Font("Dialog", Font.BOLD, 23));
-		jLabel1.setText("Ìí  ¼Ó   ÓÃ   »§");
+		jLabel1.setText("æ·»  åŠ    ç”¨   æˆ·");
 		jLabel1.setBounds(new Rectangle(134, 12, 198, 27));
 		jLabel2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jLabel2.setText("ÓÃ»§Ãû:");
+		jLabel2.setText("ç”¨æˆ·å:");
 		jLabel2.setBounds(new Rectangle(90, 66, 68, 22));
 		jLabel3.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jLabel3.setText("ÃÜ    Âë:");
+		jLabel3.setText("å¯†    ç :");
 		jLabel3.setBounds(new Rectangle(90, 118, 75, 27));
 		jLabel4.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jLabel4.setText("È·ÈÏÃÜÂë:");
+		jLabel4.setText("ç¡®è®¤å¯†ç :");
 		jLabel4.setBounds(new Rectangle(84, 167, 89, 29));
 		jTextField1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 13));
 		jTextField1.setBorder(BorderFactory.createLoweredBevelBorder());
@@ -72,12 +72,12 @@ public class UserAddFrame extends JFrame {
 		jButton1.setBounds(new Rectangle(99, 225, 89, 25));
 		jButton1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 13));
 		jButton1.setBorder(BorderFactory.createRaisedBevelBorder());
-		jButton1.setText("Ìá    ½»");
+		jButton1.setText("æ    äº¤");
 		jButton1.addActionListener(new AddAdminFrame_jButton1_actionAdapter(this));
 		jButton2.setBounds(new Rectangle(267, 225, 89, 25));
 		jButton2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 13));
 		jButton2.setBorder(BorderFactory.createRaisedBevelBorder());
-		jButton2.setText("ÍË    ³ö");
+		jButton2.setText("é€€    å‡º");
 		jButton2.addActionListener(new AddAdminFrame_jButton2_actionAdapter(this));
 		jOptionPane1.setBounds(new Rectangle(0, 233, 262, 90));
 		jOptionPane1.setLayout(null);
@@ -93,25 +93,25 @@ public class UserAddFrame extends JFrame {
 		contentPane.add(jOptionPane1);
 	}
 
-	// ÍË³ö
+	// é€€å‡º
 	public void jButton2_actionPerformed(ActionEvent e) {
 		this.dispose();
 	}
 
-	// Ìí¼Ó
+	// æ·»åŠ 
 	public void jButton1_actionPerformed(ActionEvent e) {
 		boolean zhi = false;
-		// Òì³£ÅĞ¶Ï
+		// å¼‚å¸¸åˆ¤æ–­
 		if (jTextField1.getText().length() == 0) {
-			jOptionPane1.showMessageDialog(this, "ÓÃ»§Ãû²»ÄÜÎª¿Õ£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+			jOptionPane1.showMessageDialog(this, "ç”¨æˆ·åä¸èƒ½ä¸ºç©ºï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 		} else if (jPasswordField2.getText().trim().equals(jPasswordField1.getText().trim())) {
 			zhi = true;
 		} else {
-			jOptionPane1.showMessageDialog(this, "ÃÜÂëÈ·ÈÏ´íÎó£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+			jOptionPane1.showMessageDialog(this, "å¯†ç ç¡®è®¤é”™è¯¯ï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 		}
 		if (zhi) {
 			try {
-				// ²éÑ¯ÓÃ»§ÃûÊÇ·ñ´æÔÚ
+				// æŸ¥è¯¢ç”¨æˆ·åæ˜¯å¦å­˜åœ¨
 				boolean name = false;
 				dbConn conn = new dbConn();
 				ResultSet rs = conn.getRs("select userName from tb_user");
@@ -121,12 +121,12 @@ public class UserAddFrame extends JFrame {
 					}
 				}
 				if (name) {
-					jOptionPane1.showMessageDialog(this, "¸ÃÓÃ»§ÃûÒÑ¾­´æÔÚ£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+					jOptionPane1.showMessageDialog(this, "è¯¥ç”¨æˆ·åå·²ç»å­˜åœ¨ï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 				} else {
-					// ²»´æÔÚÔòÌí¼Ó
+					// ä¸å­˜åœ¨åˆ™æ·»åŠ 
 					conn.getUpdate("insert into tb_user (userName,userPwd,userType) values ('"
 							+ jTextField1.getText().trim() + "','" + jPasswordField2.getText().trim() + "','2')");
-					jOptionPane1.showMessageDialog(this, "¹§Ï²ÄúÌí¼ÓÓÃ»§³É¹¦£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+					jOptionPane1.showMessageDialog(this, "æ­å–œæ‚¨æ·»åŠ ç”¨æˆ·æˆåŠŸï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 				}
 				rs.close();
 			} catch (Exception ce) {

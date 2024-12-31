@@ -20,11 +20,11 @@ import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 
 /**
- * 
- * Title: Ñ§ÉúĞÅÏ¢¹ÜÀí
- * Description: Ñ§ÉúĞÅÏ¢¹ÜÀíÄ£¿é£¬¿ÉÒÔ·Ö±ğ°´Ñ§ºÅ¡¢ĞÕÃû¡¢°à¼¶²éÑ¯£¬ÊÇĞŞ¸Ä¡¢É¾³ıÑ§ÉúĞÅÏ¢µÄÈë¿Ú¡£
- * 
- * @author »Æ²ß£¬³Â×ÓÈ¨£¬µÔÀ¥Ñó£¬ÈÄÈï
+ *
+ * Title: å­¦ç”Ÿä¿¡æ¯ç®¡ç†
+ * Description: å­¦ç”Ÿä¿¡æ¯ç®¡ç†æ¨¡å—ï¼Œå¯ä»¥åˆ†åˆ«æŒ‰å­¦å·ã€å§“åã€ç­çº§æŸ¥è¯¢ï¼Œæ˜¯ä¿®æ”¹ã€åˆ é™¤å­¦ç”Ÿä¿¡æ¯çš„å…¥å£ã€‚
+ *
+ * @author é»„ç­–ï¼Œé™ˆå­æƒï¼Œç¿Ÿæ˜†æ´‹ï¼Œé¥¶è•Š
  */
 
 public class StudentManager extends JFrame {
@@ -55,7 +55,7 @@ public class StudentManager extends JFrame {
 	JTable jTable1 = new JTable();
 	int intRow;
 	dbConn conn = new dbConn();
-	String[] arrField = { "Ñ§ºÅ", "ĞÕÃû", "Ñ§Ôº", "×¨Òµ", "°à¼¶" };
+	String[] arrField = { "å­¦å·", "å§“å", "å­¦é™¢", "ä¸“ä¸š", "ç­çº§" };
 	DefaultTableModel model = new DefaultTableModel();
 	Object[][] arrData = {};
 	static int find;
@@ -73,31 +73,31 @@ public class StudentManager extends JFrame {
 	private void jbInit() throws Exception {
 
 		getContentPane().setLayout(xYLayout1);
-		jLabel1.setFont(new java.awt.Font("ĞÂËÎÌå", Font.BOLD, 27));
-		jLabel1.setText("Ñ§ÉúĞÅÏ¢¹ÜÀí");
+		jLabel1.setFont(new java.awt.Font("æ–°å®‹ä½“", Font.BOLD, 27));
+		jLabel1.setText("å­¦ç”Ÿä¿¡æ¯ç®¡ç†");
 		jLabel2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 20));
-		jLabel2.setText("ÇëÑ¡Ôñ²éÑ¯·½Ê½£º");
-		this.setTitle("Ñ§ÉúĞÅÏ¢¹ÜÀí");
+		jLabel2.setText("è¯·é€‰æ‹©æŸ¥è¯¢æ–¹å¼ï¼š");
+		this.setTitle("å­¦ç”Ÿä¿¡æ¯ç®¡ç†");
 		jPanel1.setBorder(BorderFactory.createEtchedBorder());
 		jPanel1.setLayout(xYLayout5);
 		jLabel3.setFont(new java.awt.Font("Dialog", Font.PLAIN, 20));
-		jLabel3.setText("ÇëÊäÈëÑ§ºÅ£º");
+		jLabel3.setText("è¯·è¾“å…¥å­¦å·ï¼š");
 		jButton1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 20));
-		jButton1.setText("²éÑ¯");
+		jButton1.setText("æŸ¥è¯¢");
 		jButton1.addActionListener(new StudentC_jButton1_actionAdapter(this));
 		jPanel2.setBorder(BorderFactory.createEtchedBorder());
 		jPanel2.setLayout(xYLayout2);
 		jLabel4.setFont(new java.awt.Font("Dialog", Font.PLAIN, 20));
-		jLabel4.setText("ÇëÊäÈëÑ§ÉúĞÕÃû£º");
+		jLabel4.setText("è¯·è¾“å…¥å­¦ç”Ÿå§“åï¼š");
 		jButton2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 20));
-		jButton2.setText("²éÑ¯");
+		jButton2.setText("æŸ¥è¯¢");
 		jButton2.addActionListener(new StudentC_jButton2_actionAdapter(this));
 		jPanel4.setBorder(BorderFactory.createEtchedBorder());
 		jPanel4.setLayout(xYLayout4);
 		jLabel6.setFont(new java.awt.Font("Dialog", Font.PLAIN, 20));
-		jLabel6.setText("ÇëÊäÈëÒª²éÑ¯µÄ°à¼¶£º");
+		jLabel6.setText("è¯·è¾“å…¥è¦æŸ¥è¯¢çš„ç­çº§ï¼š");
 		jButton4.setFont(new java.awt.Font("Dialog", Font.PLAIN, 20));
-		jButton4.setText("²éÑ¯");
+		jButton4.setText("æŸ¥è¯¢");
 		jButton4.addActionListener(new StudentC_jButton4_actionAdapter(this));
 		jComboBox1.addActionListener(new StudentC_jComboBox1_actionAdapter(this));
 		jComboBox1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 20));
@@ -105,7 +105,7 @@ public class StudentManager extends JFrame {
 		jTextField1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 20));
 		jTextField2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 20));
 		jButton5.setFont(new java.awt.Font("Dialog", Font.PLAIN, 20));
-		jButton5.setText("ĞŞ¸Ä");
+		jButton5.setText("ä¿®æ”¹");
 		jButton5.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				jButton5_actionPerformed(e);
@@ -113,22 +113,22 @@ public class StudentManager extends JFrame {
 		});
 
 		jButton6.setFont(new java.awt.Font("Dialog", Font.PLAIN, 20));
-		jButton6.setText("·µ»Ø");
+		jButton6.setText("è¿”å›");
 		jButton6.addActionListener(new StudentC_jButton6_actionAdapter(this));
 		jScrollPane1.setBorder(BorderFactory.createEtchedBorder());
 		jTable1.setCellSelectionEnabled(true);
 		jButton7.setFont(new java.awt.Font("Dialog", Font.PLAIN, 20));
-		jButton7.setText("É¾³ı");
+		jButton7.setText("åˆ é™¤");
 		jButton7.addActionListener(new StudentC_jButton7_actionAdapter(this));
 		this.getContentPane().add(jPanel2, new XYConstraints(150, 125, 510, 50));
 		jPanel2.add(jButton2, new XYConstraints(381, 8, 85, 27));
 		this.getContentPane().add(jPanel4, new XYConstraints(150, 125, 510, 50));
 		jPanel4.add(jButton4, new XYConstraints(388, 8, 89, 26));
 		ShowPanel();
-		jComboBox1.addItem("ÇëÑ¡Ôñ");
-		jComboBox1.addItem("°´Ñ§ºÅ²éÑ¯");
-		jComboBox1.addItem("°´ĞÕÃû²éÑ¯");
-		jComboBox1.addItem("°´°à¼¶²éÑ¯");
+		jComboBox1.addItem("è¯·é€‰æ‹©");
+		jComboBox1.addItem("æŒ‰å­¦å·æŸ¥è¯¢");
+		jComboBox1.addItem("æŒ‰å§“åæŸ¥è¯¢");
+		jComboBox1.addItem("æŒ‰ç­çº§æŸ¥è¯¢");
 		jPanel1.add(jTextField1, new XYConstraints(164, 8, 149, 25));
 		jPanel1.add(jButton1, new XYConstraints(360, 8, 80, 29));
 		jPanel1.add(jLabel3, new XYConstraints(29, 8, 125, 26));
@@ -146,27 +146,27 @@ public class StudentManager extends JFrame {
 		this.getContentPane().add(jButton6, new XYConstraints(525, 545, 95, 34));
 		this.getContentPane().add(jButton7, new XYConstraints(375, 545, 95, 34));
 
-		// ÓÃ»§µÈ¼¶ÅĞ¶Ï
-		// 1Îª¹ÜÀíÔ±
+		// ç”¨æˆ·ç­‰çº§åˆ¤æ–­
+		// 1ä¸ºç®¡ç†å‘˜
 		if (MainFrame.level.equals("1")) {
-			// ²»Òş²ØÈÎºÎ¹¦ÄÜ
+			// ä¸éšè—ä»»ä½•åŠŸèƒ½
 		}
-		// 2ÎªÆÕÍ¨ÓÃ»§
+		// 2ä¸ºæ™®é€šç”¨æˆ·
 		else if (MainFrame.level.equals("2")) {
-			// Òş²Ø²¿·Ö¹¦ÄÜ
+			// éšè—éƒ¨åˆ†åŠŸèƒ½
 			jButton5.setVisible(false);
 			jButton7.setVisible(false);
 		}
 
-		// ²éÕÒËùÓĞÑ§Éú
+		// æŸ¥æ‰¾æ‰€æœ‰å­¦ç”Ÿ
 		sql = "select * from tb_student";
-		// ¸üĞÂÏÔÊ¾
+		// æ›´æ–°æ˜¾ç¤º
 		UpdateRecord();
 	}
 
-	// ¸üĞÂÏÔÊ¾
+	// æ›´æ–°æ˜¾ç¤º
 	public void UpdateRecord() {
-		Object[][] arrTmp = {}; // Éè¶¨±í¸ñµÄ×Ö¶Î
+		Object[][] arrTmp = {}; // è®¾å®šè¡¨æ ¼çš„å­—æ®µ
 		Vector vec = new Vector(1, 1);
 		model = new DefaultTableModel(arrTmp, arrField);
 		jTable1 = new JTable(model);
@@ -197,7 +197,7 @@ public class StudentManager extends JFrame {
 		jTable1.setShowVerticalLines(true);
 	}
 
-	// ²éÑ¯·½Ê½
+	// æŸ¥è¯¢æ–¹å¼
 	public void ShowPanel() {
 		jPanel1.setVisible(false);
 		jPanel2.setVisible(false);
@@ -210,7 +210,7 @@ public class StudentManager extends JFrame {
 			jPanel4.setVisible(true);
 	}
 
-	// »ñÈ¡Ñ¡¶¨µÄĞĞ
+	// è·å–é€‰å®šçš„è¡Œ
 	public void getM() {
 		intRow = jTable1.getSelectedRow();
 		if (intRow == -1)
@@ -223,47 +223,47 @@ public class StudentManager extends JFrame {
 		}
 	}
 
-	// ÍË³ö
+	// é€€å‡º
 	public void jButton6_actionPerformed(ActionEvent e) {
 		this.dispose();
 	}
 
-	// °´Ñ§ºÅ²éÑ¯
+	// æŒ‰å­¦å·æŸ¥è¯¢
 	public void jButton1_actionPerformed(ActionEvent e) {
 		if (!jTextField1.getText().trim().equals("")) {
 			sql = "select * from tb_student where stuNumber='" + jTextField1.getText().trim() + "'";
 			UpdateRecord();
 		} else
-			jOptionPane_LoginFeedback.showMessageDialog(this, "ÇëÊäÈëÒª²éÑ¯µÄÑ§ÉúÑ§ºÅ£¡", "Ìá Ê¾",
+			jOptionPane_LoginFeedback.showMessageDialog(this, "è¯·è¾“å…¥è¦æŸ¥è¯¢çš„å­¦ç”Ÿå­¦å·ï¼", "æ ç¤º",
 					jOptionPane_LoginFeedback.INFORMATION_MESSAGE);
 	}
 
-	// Ñ¡Ôñ´¥·¢
+	// é€‰æ‹©è§¦å‘
 	public void jComboBox1_actionPerformed(ActionEvent e) {
 		ShowPanel();
 	}
 
-	// °´ĞÕÃû²éÑ¯
+	// æŒ‰å§“åæŸ¥è¯¢
 	public void jButton2_actionPerformed(ActionEvent e) {
 		if (!jTextField2.getText().trim().equals("")) {
 			sql = "select * from tb_student where stuName='" + jTextField2.getText().trim() + "'";
 			UpdateRecord();
 		} else
-			jOptionPane_LoginFeedback.showMessageDialog(this, "ÇëÊäÈëÒª²éÑ¯µÄÑ§ÉúĞÕÃû£¡", "Ìá Ê¾",
+			jOptionPane_LoginFeedback.showMessageDialog(this, "è¯·è¾“å…¥è¦æŸ¥è¯¢çš„å­¦ç”Ÿå§“åï¼", "æ ç¤º",
 					jOptionPane_LoginFeedback.INFORMATION_MESSAGE);
 	}
 
-	// °´°à¼¶²éÑ¯
+	// æŒ‰ç­çº§æŸ¥è¯¢
 	public void jButton4_actionPerformed(ActionEvent e) {
 		if (!jTextField3.getText().trim().equals("")) {
 			sql = "select * from tb_student where stuClass='" + jTextField3.getText().trim() + "'";
 			UpdateRecord();
 		} else
-			jOptionPane_LoginFeedback.showMessageDialog(this, "ÇëÊäÈëÒª²éÑ¯µÄ°à¼¶£¡", "Ìá Ê¾",
+			jOptionPane_LoginFeedback.showMessageDialog(this, "è¯·è¾“å…¥è¦æŸ¥è¯¢çš„ç­çº§ï¼", "æ ç¤º",
 					jOptionPane_LoginFeedback.INFORMATION_MESSAGE);
 	}
 
-	// ĞŞ¸Ä
+	// ä¿®æ”¹
 	public void jButton5_actionPerformed(ActionEvent e) {
 		getM();
 		if (intRow != -1) {
@@ -275,30 +275,30 @@ public class StudentManager extends JFrame {
 			siadd.validate();
 			this.dispose();
 		} else
-			jOptionPane_LoginFeedback.showMessageDialog(this, "ÇëÑ¡ÔñÒªĞŞ¸ÄµÄĞÅÏ¢£¡", "Ìá Ê¾",
+			jOptionPane_LoginFeedback.showMessageDialog(this, "è¯·é€‰æ‹©è¦ä¿®æ”¹çš„ä¿¡æ¯ï¼", "æ ç¤º",
 					jOptionPane_LoginFeedback.INFORMATION_MESSAGE);
 	}
 
-	// ´¥·¢É¾³ı
+	// è§¦å‘åˆ é™¤
 	public void jButton7_actionPerformed(ActionEvent e) {
 		getM();
 		if (intRow != -1) {
 			delstu();
 		} else
-			jOptionPane_LoginFeedback.showMessageDialog(this, "ÇëÑ¡ÔñÒªÉ¾³ıµÄĞÅÏ¢£¡", "Ìá Ê¾",
+			jOptionPane_LoginFeedback.showMessageDialog(this, "è¯·é€‰æ‹©è¦åˆ é™¤çš„ä¿¡æ¯ï¼", "æ ç¤º",
 					jOptionPane_LoginFeedback.INFORMATION_MESSAGE);
 
 	}
 
-	// É¾³ı
+	// åˆ é™¤
 	public void delstu() {
 		try {
 			if (0 < conn.getUpdate("delete from tb_student where stuNumber='" + find + "'")) {
-				jOptionPane_LoginFeedback.showMessageDialog(this, "Ñ§ÉúĞÅÏ¢É¾³ı³É¹¦£¡", "Ìá Ê¾",
+				jOptionPane_LoginFeedback.showMessageDialog(this, "å­¦ç”Ÿä¿¡æ¯åˆ é™¤æˆåŠŸï¼", "æ ç¤º",
 						jOptionPane_LoginFeedback.INFORMATION_MESSAGE);
 			} else {
-				System.err.printf("É¾³ı tb_student ±íÖĞ stuNumber = %d µÄ¼ÇÂ¼Ê§°Ü\n", find);
-				jOptionPane_LoginFeedback.showMessageDialog(this, "Ñ§ÉúĞÅÏ¢É¾³ıÊ§°Ü£¡", "Ìá Ê¾",
+				System.err.printf("åˆ é™¤ tb_student è¡¨ä¸­ stuNumber = %d çš„è®°å½•å¤±è´¥\n", find);
+				jOptionPane_LoginFeedback.showMessageDialog(this, "å­¦ç”Ÿä¿¡æ¯åˆ é™¤å¤±è´¥ï¼", "æ ç¤º",
 						jOptionPane_LoginFeedback.INFORMATION_MESSAGE);
 			}
 		} catch (Exception ce) {

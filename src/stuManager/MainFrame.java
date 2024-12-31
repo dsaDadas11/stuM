@@ -24,21 +24,21 @@ import User.UserDelete;
 import User.UserPasswordFrame;
 
 /**
- * 
- * Title: Ö÷½çÃæ 
- * Description: Ö÷½çÃæÄ£¿é£¬ÓĞ¶ÔÑ§Éú¡¢°à¼¶¡¢ÔºÏµ¡¢¿Î³Ì¡¢³É¼¨¡¢ÓÃ»§µÄÂ¼ÈëÓë¹ÜÀíµÄ²Ëµ¥
  *
- * @author »Æ²ß£¬³Â×ÓÈ¨£¬µÔÀ¥Ñó£¬ÈÄÈï
+ * Title: ä¸»ç•Œé¢
+ * Description: ä¸»ç•Œé¢æ¨¡å—ï¼Œæœ‰å¯¹å­¦ç”Ÿã€ç­çº§ã€é™¢ç³»ã€è¯¾ç¨‹ã€æˆç»©ã€ç”¨æˆ·çš„å½•å…¥ä¸ç®¡ç†çš„èœå•
+ *
+ * @author é»„ç­–ï¼Œé™ˆå­æƒï¼Œç¿Ÿæ˜†æ´‹ï¼Œé¥¶è•Š
  */
 
 public class MainFrame extends JFrame {
 	JPanel contentPane;
 	public static String level;
 	static String name;
-	
+
 	URL url = getClass().getResource("/img/bg.jpg");
 	ImageIcon mainBg = new ImageIcon(url);
-	
+
 	JLabel jLabel_welcomeTitle = new JLabel();
 	JLabel jLabel_welcomeTitle2 = new JLabel();
 	JLabel jLabel_help1 = new JLabel();
@@ -101,76 +101,76 @@ public class MainFrame extends JFrame {
 		contentPane.setLayout(null);
 		this.setJMenuBar(jMenuBar);
 		setSize(new Dimension(911, 698));
-		setTitle("»¶Ó­µÇÂ¼Ñ§Éú¹ÜÀíÏµÍ³");
+		setTitle("æ¬¢è¿ç™»å½•å­¦ç”Ÿç®¡ç†ç³»ç»Ÿ");
 
-		jLabel_welcomeTitle.setText("»¶ Ó­ Ê¹ ÓÃ Ñ§ Éú ĞÅ Ï¢ ¹Ü Àí Ïµ Í³");
+		jLabel_welcomeTitle.setText("æ¬¢ è¿ ä½¿ ç”¨ å­¦ ç”Ÿ ä¿¡ æ¯ ç®¡ ç† ç³» ç»Ÿ");
 		jLabel_welcomeTitle.setBounds(new Rectangle(180, 130, 600, 33));
 		jLabel_welcomeTitle.setFont(new java.awt.Font("Dialog", Font.BOLD, 30));
 		jLabel_welcomeTitle.setForeground(Color.lightGray);
 
 		jLabel_welcomeTitle2.setFont(new java.awt.Font("Dialog", Font.BOLD, 30));
-		jLabel_welcomeTitle2.setText("»¶ Ó­ Ê¹ ÓÃ Ñ§ Éú ĞÅ Ï¢ ¹Ü Àí Ïµ Í³");
+		jLabel_welcomeTitle2.setText("æ¬¢ è¿ ä½¿ ç”¨ å­¦ ç”Ÿ ä¿¡ æ¯ ç®¡ ç† ç³» ç»Ÿ");
 		jLabel_welcomeTitle2.setBounds(new Rectangle(181, 131, 608, 33));
 
 		jLabel_help1.setFont(new java.awt.Font("Dialog", Font.BOLD, 20));
-		jLabel_help1.setText("Äú¿ÉÒÔ¶Ô£º");
+		jLabel_help1.setText("æ‚¨å¯ä»¥å¯¹ï¼š");
 		jLabel_help1.setBounds(new Rectangle(500, 340, 400, 30));
-		
+
 		jLabel_help2.setFont(new java.awt.Font("Dialog", Font.BOLD, 20));
-		jLabel_help2.setText("Ñ§Éú¡¢°à¼¶¡¢ÔºÏµ¡¢¿Î³Ì¡¢³É¼¨");
+		jLabel_help2.setText("å­¦ç”Ÿã€ç­çº§ã€é™¢ç³»ã€è¯¾ç¨‹ã€æˆç»©");
 		jLabel_help2.setBounds(new Rectangle(500, 370, 400, 30));
-		
+
 		jLabel_help3.setFont(new java.awt.Font("Dialog", Font.BOLD, 20));
-		jLabel_help3.setText("½øĞĞÂ¼Èë¡¢²éÑ¯¡¢ĞŞ¸Ä¡¢É¾³ıµÄ²Ù×÷");
+		jLabel_help3.setText("è¿›è¡Œå½•å…¥ã€æŸ¥è¯¢ã€ä¿®æ”¹ã€åˆ é™¤çš„æ“ä½œ");
 		jLabel_help3.setBounds(new Rectangle(500, 400, 400, 30));
-		
-		jMenu_stuManager.setText("Ñ§Éú¹ÜÀí");
-		jMenuItem_stuInfoSignUp.setText("  Â¼  Èë");
+
+		jMenu_stuManager.setText("å­¦ç”Ÿç®¡ç†");
+		jMenuItem_stuInfoSignUp.setText("  å½•  å…¥");
 		jMenuItem_stuInfoSignUp.addActionListener(new MainFrame_jMenuItem_stuInfoSignUp_actionAdapter(this));
-		jMenuItem_stuInfoInquire.setText("  ¹Ü  Àí");
+		jMenuItem_stuInfoInquire.setText("  ç®¡  ç†");
 		jMenuItem_stuInfoInquire.addActionListener(new MainFrame_jMenuItem_stuInfoInquire_actionAdapter(this));
 
-		jMenu_classManager.setText("°à¼¶¹ÜÀí");
-		jMenuItem_classInput.setText("  Â¼  Èë");
+		jMenu_classManager.setText("ç­çº§ç®¡ç†");
+		jMenuItem_classInput.setText("  å½•  å…¥");
 		jMenuItem_classInput.addActionListener(new MainFrame_jMenuItem_classInput_actionAdapter(this));
-		jMenuItem_classManager.setText("  ¹Ü  Àí");
+		jMenuItem_classManager.setText("  ç®¡  ç†");
 		jMenuItem_classManager.addActionListener(new MainFrame_jMenuItem_classManager_actionAdapter(this));
 
-		jMenu_departManager.setText("ÔºÏµ¹ÜÀí");
-		jMenuItem_departInput.setText("  Â¼  Èë");
+		jMenu_departManager.setText("é™¢ç³»ç®¡ç†");
+		jMenuItem_departInput.setText("  å½•  å…¥");
 		jMenuItem_departInput.addActionListener(new MainFrame_jMenuItem_departInput_actionAdapter(this));
-		jMenuItem_departManager.setText("  ¹Ü  Àí");
+		jMenuItem_departManager.setText("  ç®¡  ç†");
 		jMenuItem_departManager.addActionListener(new MainFrame_jMenuItem_departManager_actionAdapter(this));
 
-		jMenu_courceManager.setText("¿Î³Ì¹ÜÀí");
-		jMenuItem_courceInput.setText("  Â¼  Èë");
+		jMenu_courceManager.setText("è¯¾ç¨‹ç®¡ç†");
+		jMenuItem_courceInput.setText("  å½•  å…¥");
 		jMenuItem_courceInput.addActionListener(new MainFrame_jMenuItem_courceInput_actionAdapter(this));
-		jMenuItem_courceManager.setText("  ¹Ü  Àí");
+		jMenuItem_courceManager.setText("  ç®¡  ç†");
 		jMenuItem_courceManager.addActionListener(new MainFrame_jMenuItem_courceManager_actionAdapter(this));
 
-		jMenu_scoreManager.setText("³É¼¨¹ÜÀí");
-		jMenuItem_scoreInput.setText("  Â¼  Èë");
+		jMenu_scoreManager.setText("æˆç»©ç®¡ç†");
+		jMenuItem_scoreInput.setText("  å½•  å…¥");
 		jMenuItem_scoreInput.addActionListener(new MainFrame_jMenuItem_scoreInput_actionAdapter(this));
-		jMenuItem_scoreManager.setText("  ¹Ü  Àí");
+		jMenuItem_scoreManager.setText("  ç®¡  ç†");
 		jMenuItem_scoreManager.addActionListener(new MainFrame_jMenuItem_scoreManager_actionAdapter(this));
 
-		jMenu_userManager.setText("ÓÃ»§¹ÜÀí");
-		jMenuItem_userSignUp.setText("Ìí¼ÓÓÃ»§");
+		jMenu_userManager.setText("ç”¨æˆ·ç®¡ç†");
+		jMenuItem_userSignUp.setText("æ·»åŠ ç”¨æˆ·");
 		jMenuItem_userSignUp.addActionListener(new MainFrame_jMenuItem_userSignUp_actionAdapter(this));
-		jMenuItem_userChangePwd.setText("ĞŞ¸ÄÃÜÂë");
+		jMenuItem_userChangePwd.setText("ä¿®æ”¹å¯†ç ");
 		jMenuItem_userChangePwd.addActionListener(new MainFrame_jMenuItem_userChangePwd_actionAdapter(this));
 		jMenuItem_userDelete.setEnabled(true);
-		jMenuItem_userDelete.setText("É¾³ıÓÃ»§");
+		jMenuItem_userDelete.setText("åˆ é™¤ç”¨æˆ·");
 		jMenuItem_userDelete.addActionListener(new MainFrame_jMenuItem_userDelete_actionAdapter(this));
 
-		jMenu_about.setText("¹ØÓÚ");
-		jMenuItem_about.setText("  ¹Ø  ÓÚ");
+		jMenu_about.setText("å…³äº");
+		jMenuItem_about.setText("  å…³  äº");
 		jMenuItem_about.addActionListener(new MainFrame_jMenuItem_about_actionAdapter(this));
 
-		jMenu_quit.setText("ÍË³ö");
-		jMenuItem_quit.setText("  ÍË  ³ö");
+		jMenu_quit.setText("é€€å‡º");
+		jMenuItem_quit.setText("  é€€  å‡º");
 		jMenuItem_quit.addActionListener(new MainFrame_jMenuItem_quit_actionAdapter(this));
-		jMenuItem_reboot.setText("ÖØĞÂÆô¶¯");
+		jMenuItem_reboot.setText("é‡æ–°å¯åŠ¨");
 		jMenuItem_reboot.addActionListener(new MainFrame_jMenuItem_reboot_actionAdapter(this));
 
 		jPane_box.setBounds(new Rectangle(-6, 0, 900, 700));
@@ -219,14 +219,14 @@ public class MainFrame extends JFrame {
 		jMenu_quit.add(jMenuItem_quit);
 		jMenu_quit.add(jMenuItem_reboot);
 
-		// ÓÃ»§µÈ¼¶ÅĞ¶Ï
-		// 1Îª¹ÜÀíÔ±
+		// ç”¨æˆ·ç­‰çº§åˆ¤æ–­
+		// 1ä¸ºç®¡ç†å‘˜
 		if (level.equals("1")) {
-			// ²»Òş²ØÈÎºÎ¹¦ÄÜ
+			// ä¸éšè—ä»»ä½•åŠŸèƒ½
 		}
-		// 2ÎªÆÕÍ¨ÓÃ»§
+		// 2ä¸ºæ™®é€šç”¨æˆ·
 		else if (level.equals("2")) {
-			// Òş²Ø²¿·Ö¹¦ÄÜ
+			// éšè—éƒ¨åˆ†åŠŸèƒ½
 			this.jMenuItem_userSignUp.setVisible(false);
 			this.jMenuItem_userDelete.setVisible(false);
 			this.jMenuItem_stuInfoSignUp.setVisible(false);
@@ -237,18 +237,18 @@ public class MainFrame extends JFrame {
 		}
 	}
 
-	// ¹ØÓÚĞÅÏ¢
+	// å…³äºä¿¡æ¯
 	public void jMenuItem_about_actionPerformed(ActionEvent e) {
-		jOptionPane_LoginFeedback.showMessageDialog(this, "Ñ§ÉúĞÅÏ¢¹ÜÀíÏµÍ³\n°æ±¾ºÅ£º1.0\nauthor£º»Æ²ß ³Â×ÓÈ¨ µÔÀ¥Ñó ÈÄÈï\ngithub£ºhttps://github.com/dsaDadas11/stuM\n\n ^_^",
-				"¹ØÓÚ", jOptionPane_LoginFeedback.INFORMATION_MESSAGE);
+		jOptionPane_LoginFeedback.showMessageDialog(this, "å­¦ç”Ÿä¿¡æ¯ç®¡ç†ç³»ç»Ÿ\nç‰ˆæœ¬å·ï¼š1.0\nauthorï¼šé»„ç­– é™ˆå­æƒ ç¿Ÿæ˜†æ´‹ é¥¶è•Š\ngithubï¼šhttps://github.com/dsaDadas11/stuM\n\n ^_^",
+				"å…³äº", jOptionPane_LoginFeedback.INFORMATION_MESSAGE);
 	}
 
-	// ÍË³ö
+	// é€€å‡º
 	public void jMenuItem_quit_actionPerformed(ActionEvent e) {
 		System.exit(0);
 	}
 
-	// ÖØÆô
+	// é‡å¯
 	public void jMenuItem_reboot_actionPerformed(ActionEvent e) {
 		this.dispose();
 		LoginFrame login = new LoginFrame();
@@ -259,7 +259,7 @@ public class MainFrame extends JFrame {
 		login.validate();
 	}
 
-	// Ñ§ÉúÂ¼ÈëÄ£¿é
+	// å­¦ç”Ÿå½•å…¥æ¨¡å—
 	public void jMenuItem_stuInfoSignUp_actionPerformed(ActionEvent e) {
 		StudentInfoAddFrame siadd = new StudentInfoAddFrame();
 		siadd.setLocation(400, 200);
@@ -269,7 +269,7 @@ public class MainFrame extends JFrame {
 		siadd.validate();
 	}
 
-	// Ñ§Éú¹ÜÀíÄ£¿é
+	// å­¦ç”Ÿç®¡ç†æ¨¡å—
 	public void jMenuItem_stuInfoInquire_actionPerformed(ActionEvent e) {
 		StudentManager siadd = new StudentManager();
 		siadd.setLocation(250, 60);
@@ -279,7 +279,7 @@ public class MainFrame extends JFrame {
 		siadd.validate();
 	}
 
-	// °à¼¶Â¼ÈëÄ£¿é
+	// ç­çº§å½•å…¥æ¨¡å—
 	public void jMenuItem_classInput_actionPerformed(ActionEvent e) {
 		ClassAddFrame siadd = new ClassAddFrame();
 		siadd.setLocation(400, 200);
@@ -289,7 +289,7 @@ public class MainFrame extends JFrame {
 		siadd.validate();
 	}
 
-	// °à¼¶¹ÜÀíÄ£¿é
+	// ç­çº§ç®¡ç†æ¨¡å—
 	public void jMenuItem_classManager_actionPerformed(ActionEvent e) {
 		ClassManager siadd = new ClassManager();
 		siadd.setLocation(400, 100);
@@ -299,7 +299,7 @@ public class MainFrame extends JFrame {
 		siadd.validate();
 	}
 
-	// ÔºÏµÂ¼ÈëÄ£¿é
+	// é™¢ç³»å½•å…¥æ¨¡å—
 	public void jMenuItem_departInput_actionPerformed(ActionEvent e) {
 		DepartAddFrame siadd = new DepartAddFrame();
 		siadd.setLocation(400, 200);
@@ -309,7 +309,7 @@ public class MainFrame extends JFrame {
 		siadd.validate();
 	}
 
-	// ÔºÏµ¹ÜÀíÄ£¿é
+	// é™¢ç³»ç®¡ç†æ¨¡å—
 	public void jMenuItem_departManager_actionPerformed(ActionEvent e) {
 		DepartManager siadd = new DepartManager();
 		siadd.setLocation(400, 100);
@@ -319,7 +319,7 @@ public class MainFrame extends JFrame {
 		siadd.validate();
 	}
 
-	// ¿Î³ÌÂ¼ÈëÄ£¿é
+	// è¯¾ç¨‹å½•å…¥æ¨¡å—
 	public void jMenuItem_courceInput_actionPerformed(ActionEvent e) {
 		CourceAddFrame siadd = new CourceAddFrame();
 		siadd.setLocation(400, 200);
@@ -329,7 +329,7 @@ public class MainFrame extends JFrame {
 		siadd.validate();
 	}
 
-	// ¿Î³Ì¹ÜÀíÄ£¿é
+	// è¯¾ç¨‹ç®¡ç†æ¨¡å—
 	public void jMenuItem_courceManager_actionPerformed(ActionEvent e) {
 		CourceManager siadd = new CourceManager();
 		siadd.setLocation(400, 100);
@@ -339,7 +339,7 @@ public class MainFrame extends JFrame {
 		siadd.validate();
 	}
 
-	// ³É¼¨Â¼ÈëÄ£¿é
+	// æˆç»©å½•å…¥æ¨¡å—
 	public void jMenuItem_scoreInput_actionPerformed(ActionEvent e) {
 		ScoreAddFrame siadd = new ScoreAddFrame();
 		siadd.setLocation(400, 200);
@@ -350,7 +350,7 @@ public class MainFrame extends JFrame {
 
 	}
 
-	// ³É¼¨¹ÜÀíÄ£¿é
+	// æˆç»©ç®¡ç†æ¨¡å—
 	public void jMenuItem_scoreManager_actionPerformed(ActionEvent e) {
 		ScoreManager siadd = new ScoreManager();
 		siadd.setLocation(400, 100);
@@ -360,7 +360,7 @@ public class MainFrame extends JFrame {
 		siadd.validate();
 	}
 
-	// Ìí¼ÓÓÃ»§Ä£¿é
+	// æ·»åŠ ç”¨æˆ·æ¨¡å—
 	public void jMenuItem_userSignUp_actionPerformed(ActionEvent e) {
 		UserAddFrame siadd = new UserAddFrame();
 		siadd.setLocation(400, 200);
@@ -370,7 +370,7 @@ public class MainFrame extends JFrame {
 		siadd.validate();
 	}
 
-	// É¾³ıÓÃ»§Ä£¿é
+	// åˆ é™¤ç”¨æˆ·æ¨¡å—
 	public void jMenuItem_userDelete_actionPerformed(ActionEvent e) {
 		UserDelete siadd = new UserDelete();
 		siadd.setLocation(400, 200);
@@ -380,7 +380,7 @@ public class MainFrame extends JFrame {
 		siadd.validate();
 	}
 
-	// ĞŞ¸ÄÃÜÂëÄ£¿é
+	// ä¿®æ”¹å¯†ç æ¨¡å—
 	public void jMenuItem_userChangePwd_actionPerformed(ActionEvent e) {
 		UserPasswordFrame siadd = new UserPasswordFrame(level, name);
 		siadd.setLocation(400, 200);

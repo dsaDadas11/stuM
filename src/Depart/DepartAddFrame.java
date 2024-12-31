@@ -10,11 +10,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * 
- * Title: ÔºÏµĞÅÏ¢Â¼Èë 
- * Description: ÔºÏµĞÅÏ¢Â¼ÈëÄ£¿é£¬ÊµÏÖ¶ÔÑ§Ôº¡¢×¨ÒµµÄÂ¼Èë¡£
- * 
- * @author »Æ²ß£¬³Â×ÓÈ¨£¬µÔÀ¥Ñó£¬ÈÄÈï
+ *
+ * Title: é™¢ç³»ä¿¡æ¯å½•å…¥
+ * Description: é™¢ç³»ä¿¡æ¯å½•å…¥æ¨¡å—ï¼Œå®ç°å¯¹å­¦é™¢ã€ä¸“ä¸šçš„å½•å…¥ã€‚
+ *
+ * @author é»„ç­–ï¼Œé™ˆå­æƒï¼Œç¿Ÿæ˜†æ´‹ï¼Œé¥¶è•Š
  */
 
 public class DepartAddFrame extends JFrame {
@@ -42,23 +42,23 @@ public class DepartAddFrame extends JFrame {
 		contentPane = (JPanel) getContentPane();
 		contentPane.setLayout(null);
 		setSize(new Dimension(465, 280));
-		setTitle("ÔºÏµÂ¼Èë");
+		setTitle("é™¢ç³»å½•å…¥");
 		jLabel1.setFont(new java.awt.Font("Dialog", Font.BOLD, 20));
-		jLabel1.setText("Ôº  Ïµ  ĞÅ  Ï¢  Â¼  Èë");
+		jLabel1.setText("é™¢  ç³»  ä¿¡  æ¯  å½•  å…¥");
 		jLabel1.setBounds(new Rectangle(136, 20, 212, 25));
 		jLabel3.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jLabel3.setText("ËùÊôÑ§Ôº:");
+		jLabel3.setText("æ‰€å±å­¦é™¢:");
 		jLabel3.setBounds(new Rectangle(80, 80, 90, 20));
 		jButton1.setBounds(new Rectangle(102, 180, 96, 29));
 		jButton1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
 		jButton1.setBorder(BorderFactory.createRaisedBevelBorder());
-		jButton1.setText("Ìá    ½»");
+		jButton1.setText("æ    äº¤");
 		jButton1.addActionListener(new AddDepartFrame_jButton1_actionAdapter(this));
 		jButton2.setBounds(new Rectangle(265, 180, 96, 31));
 		jButton2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
 		jButton2.setBorder(BorderFactory.createRaisedBevelBorder());
 		jButton2.setToolTipText("");
-		jButton2.setText("ÍË    ³ö");
+		jButton2.setText("é€€    å‡º");
 		jButton2.addActionListener(new AddDepartFrame_jButton2_actionAdapter(this));
 		jOptionPane1.setBounds(new Rectangle(106, 258, 262, 90));
 		jOptionPane1.setLayout(null);
@@ -67,7 +67,7 @@ public class DepartAddFrame extends JFrame {
 		jComboBox1.setBounds(new Rectangle(180, 80, 180, 25));
 		jComboBox1.addActionListener(new AddDepartFrame_jComboBox1_actionAdapter(this));
 		jLabel4.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jLabel4.setText("ËùÊô×¨Òµ£º");
+		jLabel4.setText("æ‰€å±ä¸“ä¸šï¼š");
 		jLabel4.setBounds(new Rectangle(80, 130, 90, 20));
 		jComboBox2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
 		jComboBox2.setEditable(true);
@@ -80,8 +80,8 @@ public class DepartAddFrame extends JFrame {
 		contentPane.add(jComboBox2);
 		contentPane.add(jButton2);
 		contentPane.add(jButton1);
-		jComboBox1.addItem("ÇëÑ¡ÔñÑ§Ôº");
-		// Ñ¡ÔñÑ§Ôº
+		jComboBox1.addItem("è¯·é€‰æ‹©å­¦é™¢");
+		// é€‰æ‹©å­¦é™¢
 		try {
 
 			ResultSet rs = conn.getRs("select * from tb_depart ");
@@ -97,10 +97,10 @@ public class DepartAddFrame extends JFrame {
 
 	}
 
-	// Ñ¡Ôñ×¨Òµ
+	// é€‰æ‹©ä¸“ä¸š
 	public void zhuanye() {
 		jComboBox2.removeAllItems();
-		jComboBox2.addItem("ÇëÑ¡Ôñ×¨Òµ");
+		jComboBox2.addItem("è¯·é€‰æ‹©ä¸“ä¸š");
 
 		try {
 
@@ -117,7 +117,7 @@ public class DepartAddFrame extends JFrame {
 
 	}
 
-	// ´æÏÂÑ¡¶¨Ñ§Ôºµ½xueyuan
+	// å­˜ä¸‹é€‰å®šå­¦é™¢åˆ°xueyuan
 	public void xueYuan() {
 		String sel = String.valueOf(jComboBox1.getSelectedItem());
 
@@ -135,7 +135,7 @@ public class DepartAddFrame extends JFrame {
 
 	}
 
-	// ´æÏÂÑ¡¶¨×¨Òµµ½zhuanye
+	// å­˜ä¸‹é€‰å®šä¸“ä¸šåˆ°zhuanye
 	public void zhuanYe() {
 		String sel = String.valueOf(jComboBox2.getSelectedItem());
 
@@ -153,23 +153,23 @@ public class DepartAddFrame extends JFrame {
 
 	}
 
-	// ÍË³ö
+	// é€€å‡º
 	public void jButton2_actionPerformed(ActionEvent e) {
 		this.dispose();
 	}
 
-	// Ìí¼ÓÔºÏµ
+	// æ·»åŠ é™¢ç³»
 	public void jButton1_actionPerformed(ActionEvent e) {
-		// Òì³£ÅĞ¶Ï
+		// å¼‚å¸¸åˆ¤æ–­
 		if (jComboBox1.getSelectedIndex() == 0) {
-			jOptionPane1.showMessageDialog(this, "ÇëÑ¡ÔñËùÊôÑ§Ôº£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+			jOptionPane1.showMessageDialog(this, "è¯·é€‰æ‹©æ‰€å±å­¦é™¢ï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 		} else if (jComboBox2.getSelectedIndex() == 0) {
-			jOptionPane1.showMessageDialog(this, "ÇëÑ¡ÔñËùÊô×¨Òµ£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+			jOptionPane1.showMessageDialog(this, "è¯·é€‰æ‹©æ‰€å±ä¸“ä¸šï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 		} else {
 			xueYuan();
 			zhuanYe();
 			try {
-				// ¶ÔÑ§Ôº¡¢×¨Òµ·Ö±ğ´æÔÚÓë·ñµÄËÄÖÖÇé¿ö×öÅĞ¶Ï´¦Àí
+				// å¯¹å­¦é™¢ã€ä¸“ä¸šåˆ†åˆ«å­˜åœ¨ä¸å¦çš„å››ç§æƒ…å†µåšåˆ¤æ–­å¤„ç†
 				boolean departExist = false, specExist = false;
 
 				ResultSet rs_departExist = conn.getRs("select * from tb_spec where departName= '"
@@ -185,21 +185,21 @@ public class DepartAddFrame extends JFrame {
 				}
 
 				if (departExist && specExist) {
-					jOptionPane1.showMessageDialog(this, "¸ÃÑ§ÔºÓë×¨ÒµÒÑ¾­´æÔÚ£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+					jOptionPane1.showMessageDialog(this, "è¯¥å­¦é™¢ä¸ä¸“ä¸šå·²ç»å­˜åœ¨ï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 				} else if (!departExist && specExist) {
-					jOptionPane1.showMessageDialog(this, "¸Ã×¨ÒµÔÚÆäËûÑ§ÔºÒÑ¾­´æÔÚ£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+					jOptionPane1.showMessageDialog(this, "è¯¥ä¸“ä¸šåœ¨å…¶ä»–å­¦é™¢å·²ç»å­˜åœ¨ï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 				} else if (departExist && !specExist) {
 					conn.getUpdate("insert into tb_spec (departName,specName) values ('"
 							+ String.valueOf(jComboBox1.getSelectedItem()) + "','"
 							+ String.valueOf(jComboBox2.getSelectedItem()) + "')");
-					jOptionPane1.showMessageDialog(this, "¹§Ï²ÄúÔºÏµÂ¼Èë³É¹¦£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+					jOptionPane1.showMessageDialog(this, "æ­å–œæ‚¨é™¢ç³»å½•å…¥æˆåŠŸï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 				} else if (!departExist && !specExist) {
 					conn.getUpdate("insert into tb_spec (departName,specName) values ('"
 							+ String.valueOf(jComboBox1.getSelectedItem()) + "','"
 							+ String.valueOf(jComboBox2.getSelectedItem()) + "')");
 					conn.getUpdate("insert into tb_depart (departName) values ('"
 							+ String.valueOf(jComboBox1.getSelectedItem()) + "') ");
-					jOptionPane1.showMessageDialog(this, "¹§Ï²ÄúÔºÏµÂ¼Èë³É¹¦£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+					jOptionPane1.showMessageDialog(this, "æ­å–œæ‚¨é™¢ç³»å½•å…¥æˆåŠŸï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 				}
 
 			} catch (Exception ce) {
@@ -208,7 +208,7 @@ public class DepartAddFrame extends JFrame {
 		}
 	}
 
-	// Ñ¡Ôñ´¥·¢
+	// é€‰æ‹©è§¦å‘
 	public void jComboBox1_actionPerformed(ActionEvent e) {
 		zhuanye();
 		jComboBox2.setEnabled(true);

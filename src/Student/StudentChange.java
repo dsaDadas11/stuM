@@ -10,11 +10,11 @@ import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 
 /**
- * 
- * Title: Ñ§ÉúĞÅÏ¢ĞŞ¸Ä 
- * Description: Ñ§ÉúĞÅÏ¢ĞŞ¸ÄÄ£¿é
- * 
- * @author »Æ²ß£¬³Â×ÓÈ¨£¬µÔÀ¥Ñó£¬ÈÄÈï
+ *
+ * Title: å­¦ç”Ÿä¿¡æ¯ä¿®æ”¹
+ * Description: å­¦ç”Ÿä¿¡æ¯ä¿®æ”¹æ¨¡å—
+ *
+ * @author é»„ç­–ï¼Œé™ˆå­æƒï¼Œç¿Ÿæ˜†æ´‹ï¼Œé¥¶è•Š
  */
 
 public class StudentChange extends JFrame {
@@ -52,21 +52,21 @@ public class StudentChange extends JFrame {
 		contentPane = (JPanel) getContentPane();
 		contentPane.setLayout(null);
 		setSize(new Dimension(592, 500));
-		setTitle("Ñ§ÉúĞÅÏ¢ĞŞ¸Ä");
+		setTitle("å­¦ç”Ÿä¿¡æ¯ä¿®æ”¹");
 		jLabel2.setFont(new java.awt.Font("Dialog", Font.BOLD, 23));
-		jLabel2.setText("Ñ§  Éú  ĞÅ  Ï¢  ĞŞ  ¸Ä");
+		jLabel2.setText("å­¦  ç”Ÿ  ä¿¡  æ¯  ä¿®  æ”¹");
 		jLabel2.setBounds(new Rectangle(197, 17, 231, 25));
 		jLabel3.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jLabel3.setText("Ñ§       ºÅ:");
+		jLabel3.setText("å­¦       å·:");
 		jLabel3.setBounds(new Rectangle(50, 74, 90, 22));
 		jLabel4.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jLabel4.setText("ĞÕ       Ãû:");
+		jLabel4.setText("å§“       å:");
 		jLabel4.setBounds(new Rectangle(50, 124, 90, 22));
 		jLabel7.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jLabel7.setText("ËùÊôÑ§Ôº:");
+		jLabel7.setText("æ‰€å±å­¦é™¢:");
 		jLabel7.setBounds(new Rectangle(50, 174, 90, 22));
 		jLabel8.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jLabel8.setText("ËùÊô×¨Òµ:");
+		jLabel8.setText("æ‰€å±ä¸“ä¸š:");
 		jLabel8.setBounds(new Rectangle(297, 174, 90, 22));
 		jTextField1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
 		jTextField1.setBorder(BorderFactory.createLoweredBevelBorder());
@@ -87,12 +87,12 @@ public class StudentChange extends JFrame {
 		jButton2.setBounds(new Rectangle(375, 274, 90, 27));
 		jButton1.setBounds(new Rectangle(147, 274, 90, 27));
 		jButton1.setBorder(BorderFactory.createRaisedBevelBorder());
-		jButton1.setText("Ìá  ½»");
+		jButton1.setText("æ  äº¤");
 		jButton1.addActionListener(new StudentUp_jButton1_actionAdapter(this));
-		jButton2.setText("ÍË  ³ö");
+		jButton2.setText("é€€  å‡º");
 		jButton2.addActionListener(new StudentUp_jButton2_actionAdapter(this));
 		jLabel10.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jLabel10.setText("ËùÔÚ°à¼¶£º");
+		jLabel10.setText("æ‰€åœ¨ç­çº§ï¼š");
 		jLabel10.setBounds(new Rectangle(47, 224, 93, 29));
 		jComboBox1.setEnabled(false);
 		jComboBox1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
@@ -112,8 +112,8 @@ public class StudentChange extends JFrame {
 		contentPane.add(jComboBox1);
 		jButton2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
 		jButton1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
-		this.jComboBox4.addItem("ÇëÑ¡ÔñÑ§Ôº");
-		// Ñ¡ÔñÑ§Ôº
+		this.jComboBox4.addItem("è¯·é€‰æ‹©å­¦é™¢");
+		// é€‰æ‹©å­¦é™¢
 		try {
 			ResultSet rs = con.getRs("select * from tb_depart ");
 			while (rs.next()) {
@@ -129,36 +129,36 @@ public class StudentChange extends JFrame {
 
 	}
 
-	// Ñ¡ÔñÑ§Ôººó´¥·¢
+	// é€‰æ‹©å­¦é™¢åè§¦å‘
 	public void jComboBox4_actionPerformed(ActionEvent e) {
 		jcb();
 		jComboBox5.setEnabled(true);
 
 	}
 
-	// Ñ¡Ôñ×¨Òµºó´¥·¢
+	// é€‰æ‹©ä¸“ä¸šåè§¦å‘
 	public void jComboBox5_actionPerformed(ActionEvent e) {
 		classAdd();
 		jComboBox1.setEnabled(true);
 	}
 
-	// ĞŞ¸Ä
+	// ä¿®æ”¹
 	public void jButton1_actionPerformed(ActionEvent e) {
-		// Òì³£ÅĞ¶Ï
+		// å¼‚å¸¸åˆ¤æ–­
 		if (jTextField1.getText().trim().equals("")) {
-			jOptionPane_LoginFeedback.showMessageDialog(this, "ÇëÊäÈëÑ§ÉúÑ§ºÅ£¡", "Ìá Ê¾",
+			jOptionPane_LoginFeedback.showMessageDialog(this, "è¯·è¾“å…¥å­¦ç”Ÿå­¦å·ï¼", "æ ç¤º",
 					jOptionPane_LoginFeedback.INFORMATION_MESSAGE);
 		} else if (jTextField2.getText().trim().equals("")) {
-			jOptionPane_LoginFeedback.showMessageDialog(this, "ÇëÊäÈëÑ§ÉúĞÕÃû£¡", "Ìá Ê¾",
+			jOptionPane_LoginFeedback.showMessageDialog(this, "è¯·è¾“å…¥å­¦ç”Ÿå§“åï¼", "æ ç¤º",
 					jOptionPane_LoginFeedback.INFORMATION_MESSAGE);
 		} else if (jComboBox4.getSelectedIndex() == 0) {
-			jOptionPane_LoginFeedback.showMessageDialog(this, "ÇëÑ¡ÔñÑ§ÉúËùÔÚÑ§Ôº£¡", "Ìá Ê¾",
+			jOptionPane_LoginFeedback.showMessageDialog(this, "è¯·é€‰æ‹©å­¦ç”Ÿæ‰€åœ¨å­¦é™¢ï¼", "æ ç¤º",
 					jOptionPane_LoginFeedback.INFORMATION_MESSAGE);
 		} else if (jComboBox5.getSelectedIndex() == 0) {
-			jOptionPane_LoginFeedback.showMessageDialog(this, "ÇëÑ¡ÔñÑ§ÉúËùÊô×¨Òµ£¡", "Ìá Ê¾",
+			jOptionPane_LoginFeedback.showMessageDialog(this, "è¯·é€‰æ‹©å­¦ç”Ÿæ‰€å±ä¸“ä¸šï¼", "æ ç¤º",
 					jOptionPane_LoginFeedback.INFORMATION_MESSAGE);
 		} else if (jComboBox1.getSelectedIndex() == 0) {
-			jOptionPane_LoginFeedback.showMessageDialog(this, "ÇëÑ¡ÔñÑ§ÉúËùÔÚ°à¼¶£¡", "Ìá Ê¾",
+			jOptionPane_LoginFeedback.showMessageDialog(this, "è¯·é€‰æ‹©å­¦ç”Ÿæ‰€åœ¨ç­çº§ï¼", "æ ç¤º",
 					jOptionPane_LoginFeedback.INFORMATION_MESSAGE);
 		} else {
 			try {
@@ -168,13 +168,13 @@ public class StudentChange extends JFrame {
 
 				if (find == Integer.parseInt(jTextField1.getText().trim())) {
 
-					// ²»ĞŞ¸ÄÑ§ºÅµÄÇé¿ö
+					// ä¸ä¿®æ”¹å­¦å·çš„æƒ…å†µ
 					number = jTextField1.getText().trim();
 					name = jTextField2.getText().trim();
 					instu();
 				} else {
 
-					// ĞŞ¸ÄÑ§ºÅµÄÇé¿ö
+					// ä¿®æ”¹å­¦å·çš„æƒ…å†µ
 					boolean Num = false;
 					ResultSet rs = conn.getRs("select * from tb_student");
 					while (rs.next()) {
@@ -184,8 +184,8 @@ public class StudentChange extends JFrame {
 					}
 					rs.close();
 					if (Num) {
-						// ÅĞ¶ÏÑ§ºÅÊÇ·ñ´æÔÚ
-						jOptionPane_LoginFeedback.showMessageDialog(this, "Ñ§ÉúÑ§ºÅÒÑ´æÔÚ£¬ÇëÖØĞÂÊäÈë£¡", "ÌáÊ¾",
+						// åˆ¤æ–­å­¦å·æ˜¯å¦å­˜åœ¨
+						jOptionPane_LoginFeedback.showMessageDialog(this, "å­¦ç”Ÿå­¦å·å·²å­˜åœ¨ï¼Œè¯·é‡æ–°è¾“å…¥ï¼", "æç¤º",
 								JOptionPane.INFORMATION_MESSAGE, null);
 					} else {
 						number = jTextField1.getText().trim();
@@ -199,12 +199,12 @@ public class StudentChange extends JFrame {
 		}
 	}
 
-	// ÍË³ö
+	// é€€å‡º
 	public void jButton2_actionPerformed(ActionEvent e) {
 		this.dispose();
 	}
 
-	// ²éÕÒÑ§Ôº
+	// æŸ¥æ‰¾å­¦é™¢
 	public void findDepart() {
 		try {
 			ResultSet rs = conn.getRs(
@@ -218,7 +218,7 @@ public class StudentChange extends JFrame {
 		}
 	}
 
-	// ²éÕÒ×¨Òµ
+	// æŸ¥æ‰¾ä¸“ä¸š
 	public void findSpec() {
 		try {
 			ResultSet rs = conn.getRs(
@@ -232,7 +232,7 @@ public class StudentChange extends JFrame {
 		}
 	}
 
-	// ²éÕÒ°à¼¶
+	// æŸ¥æ‰¾ç­çº§
 	public void findClass() {
 		try {
 			ResultSet rs = conn.getRs(
@@ -246,10 +246,10 @@ public class StudentChange extends JFrame {
 		}
 	}
 
-	// Ñ¡Ôñ×¨Òµ
+	// é€‰æ‹©ä¸“ä¸š
 	public void jcb() {
 		jComboBox5.removeAllItems();
-		jComboBox5.addItem("ÇëÑ¡Ôñ×¨Òµ");
+		jComboBox5.addItem("è¯·é€‰æ‹©ä¸“ä¸š");
 		try {
 			ResultSet rs = conn.getRs(
 					"select * from tb_spec where departName='" + String.valueOf(jComboBox4.getSelectedItem()) + "' ");
@@ -263,10 +263,10 @@ public class StudentChange extends JFrame {
 		}
 	}
 
-	// Ñ¡Ôñ°à¼¶
+	// é€‰æ‹©ç­çº§
 	public void classAdd() {
 		jComboBox1.removeAllItems();
-		jComboBox1.addItem("ÇëÑ¡Ôñ°à¼¶");
+		jComboBox1.addItem("è¯·é€‰æ‹©ç­çº§");
 		try {
 			ResultSet rs = conn.getRs(
 					"select * from tb_class where specName='" + String.valueOf(jComboBox5.getSelectedItem()) + "' ");
@@ -281,17 +281,17 @@ public class StudentChange extends JFrame {
 
 	}
 
-	// ĞŞ¸Ä
+	// ä¿®æ”¹
 	public void instu() {
 		try {
 			if (0 < conn.getUpdate("update tb_student set stuNumber = '" + number + "', stuName = '" + name
 					+ "', stuDepart = '" + sdepart + "', stuSpec = '" + sspec + "', stuClass = '" + sclass
 					+ "' where stuNumber = '" + find + "'")) {
-				jOptionPane_LoginFeedback.showMessageDialog(this, "Ñ§ÉúĞÅÏ¢ĞŞ¸Ä³É¹¦£¡", "Ìá Ê¾",
+				jOptionPane_LoginFeedback.showMessageDialog(this, "å­¦ç”Ÿä¿¡æ¯ä¿®æ”¹æˆåŠŸï¼", "æ ç¤º",
 						jOptionPane_LoginFeedback.INFORMATION_MESSAGE);
 			} else {
-				System.err.printf("ĞŞ¸Ä tb_student ±íÖĞ stuNumber = %d µÄ¼ÇÂ¼Ê§°Ü\n", find);
-				jOptionPane_LoginFeedback.showMessageDialog(this, "Ñ§ÉúĞÅÏ¢ĞŞ¸ÄÊ§°Ü£¡", "Ìá Ê¾",
+				System.err.printf("ä¿®æ”¹ tb_student è¡¨ä¸­ stuNumber = %d çš„è®°å½•å¤±è´¥\n", find);
+				jOptionPane_LoginFeedback.showMessageDialog(this, "å­¦ç”Ÿä¿¡æ¯ä¿®æ”¹å¤±è´¥ï¼", "æ ç¤º",
 						jOptionPane_LoginFeedback.INFORMATION_MESSAGE);
 			}
 		} catch (Exception ce) {
@@ -299,7 +299,7 @@ public class StudentChange extends JFrame {
 		}
 	}
 
-	// ÏÔÊ¾
+	// æ˜¾ç¤º
 	public void showstu() {
 		if (find < 0) {
 			return;

@@ -15,11 +15,11 @@ import javax.swing.table.DefaultTableModel;
 import java.util.*;
 
 /**
- * 
- * Title: ÔºÏµ¹ÜÀí 
- * Description: ÔºÏµ¹ÜÀíÄ£¿é£¬¿ÉÒÔ¶ÔÔºÏµĞÅÏ¢½øĞĞ²éÑ¯£¬ÊÇĞŞ¸ÄºÍÉ¾³ıµÄÈë¿Ú¡£
- * 
- * @author »Æ²ß£¬³Â×ÓÈ¨£¬µÔÀ¥Ñó£¬ÈÄÈï
+ *
+ * Title: é™¢ç³»ç®¡ç†
+ * Description: é™¢ç³»ç®¡ç†æ¨¡å—ï¼Œå¯ä»¥å¯¹é™¢ç³»ä¿¡æ¯è¿›è¡ŒæŸ¥è¯¢ï¼Œæ˜¯ä¿®æ”¹å’Œåˆ é™¤çš„å…¥å£ã€‚
+ *
+ * @author é»„ç­–ï¼Œé™ˆå­æƒï¼Œç¿Ÿæ˜†æ´‹ï¼Œé¥¶è•Š
  */
 
 public class DepartManager extends JFrame {
@@ -33,7 +33,7 @@ public class DepartManager extends JFrame {
 	JButton jButton6 = new JButton();
 	dbConn conn = new dbConn();
 	Object[][] arrData = {};
-	String[] arrField = { "×¨Òµ±àºÅ", "Ñ§ÔºÃû³Æ", "×¨ÒµÃû³Æ" };
+	String[] arrField = { "ä¸“ä¸šç¼–å·", "å­¦é™¢åç§°", "ä¸“ä¸šåç§°" };
 	JOptionPane jOptionPane1 = new JOptionPane();
 	DefaultTableModel model = new DefaultTableModel();
 	String sql, find;
@@ -51,17 +51,17 @@ public class DepartManager extends JFrame {
 		getContentPane().setLayout(xYLayout1);
 		xYLayout1.setWidth(530);
 		xYLayout1.setHeight(540);
-		jLabel1.setFont(new java.awt.Font("ºÚÌå", Font.PLAIN, 20));
-		jLabel1.setText("Ôº Ïµ ĞÅ Ï¢ ¹Ü Àí");
+		jLabel1.setFont(new java.awt.Font("é»‘ä½“", Font.PLAIN, 20));
+		jLabel1.setText("é™¢ ç³» ä¿¡ æ¯ ç®¡ ç†");
 		jScrollPane1.setBorder(BorderFactory.createEtchedBorder());
 		jButton4.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jButton4.setText("ĞŞ  ¸Ä");
+		jButton4.setText("ä¿®  æ”¹");
 		jButton4.addActionListener(new DepartManager_jButton4_actionAdapter(this));
 		jButton5.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jButton5.setText("É¾  ³ı");
+		jButton5.setText("åˆ   é™¤");
 		jButton5.addActionListener(new DepartManager_jButton5_actionAdapter(this));
 		jButton6.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jButton6.setText("·µ  »Ø");
+		jButton6.setText("è¿”  å›");
 		jButton6.addActionListener(new DepartManager_jButton6_actionAdapter(this));
 		this.getContentPane().add(jLabel1, new XYConstraints(177, 14, 177, 39));
 		jScrollPane1.getViewport().add(jTable1);
@@ -70,29 +70,29 @@ public class DepartManager extends JFrame {
 		this.getContentPane().add(jButton5, new XYConstraints(220, 480, 90, 35));
 		this.getContentPane().add(jButton6, new XYConstraints(340, 480, 90, 35));
 
-		// ÓÃ»§µÈ¼¶ÅĞ¶Ï
-		// 1Îª¹ÜÀíÔ±
+		// ç”¨æˆ·ç­‰çº§åˆ¤æ–­
+		// 1ä¸ºç®¡ç†å‘˜
 		if (MainFrame.level.equals("1")) {
-			// ²»Òş²ØÈÎºÎ¹¦ÄÜ
+			// ä¸éšè—ä»»ä½•åŠŸèƒ½
 		}
-		// 2ÎªÆÕÍ¨ÓÃ»§
+		// 2ä¸ºæ™®é€šç”¨æˆ·
 		else if (MainFrame.level.equals("2")) {
-			// Òş²Ø²¿·Ö¹¦ÄÜ
+			// éšè—éƒ¨åˆ†åŠŸèƒ½
 			jButton4.setVisible(false);
 			jButton5.setVisible(false);
 		}
 
-		// Ñ¡Ôñ×¨Òµ±í
+		// é€‰æ‹©ä¸“ä¸šè¡¨
 		sql = "select * from tb_spec";
-		// Ë¢ĞÂ
+		// åˆ·æ–°
 		UpdateRecord();
 	}
 
-	// ĞŞ¸ÄÔºÏµ
+	// ä¿®æ”¹é™¢ç³»
 	public void jButton4_actionPerformed(ActionEvent e) {
 		getM();
 		if (intRow == -1) {
-			jOptionPane1.showMessageDialog(this, "ÇëÑ¡ÔñÒªĞŞ¸ÄµÄÔºÏµ£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+			jOptionPane1.showMessageDialog(this, "è¯·é€‰æ‹©è¦ä¿®æ”¹çš„é™¢ç³»ï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 		} else {
 			DepartChange siadd = new DepartChange(find);
 			siadd.setLocation(400, 200);
@@ -104,29 +104,29 @@ public class DepartManager extends JFrame {
 		}
 	}
 
-	// É¾³ıÔºÏµ
+	// åˆ é™¤é™¢ç³»
 	public void jButton5_actionPerformed(ActionEvent e) {
 		getM();
 		if (intRow == -1) {
-			jOptionPane1.showMessageDialog(this, "ÇëÑ¡ÔñÒªÉ¾³ıµÄÔºÏµ£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+			jOptionPane1.showMessageDialog(this, "è¯·é€‰æ‹©è¦åˆ é™¤çš„é™¢ç³»ï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 		}
 		try {
 			conn.getUpdate("delete from tb_spec where specId='" + Integer.valueOf(find) + "'");
-			jOptionPane1.showMessageDialog(this, "É¾³ı³É¹¦£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+			jOptionPane1.showMessageDialog(this, "åˆ é™¤æˆåŠŸï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 		} catch (Exception ce) {
 			System.out.println(ce.getMessage());
 		}
 		UpdateRecord();
 	}
 
-	// ÍË³ö
+	// é€€å‡º
 	public void jButton6_actionPerformed(ActionEvent e) {
 		this.dispose();
 	}
 
-	// ¸üĞÂ±í¸ñ
+	// æ›´æ–°è¡¨æ ¼
 	public void UpdateRecord() {
-		Object[][] arrTmp = {}; // Éè¶¨±í¸ñµÄ×Ö¶Î
+		Object[][] arrTmp = {}; // è®¾å®šè¡¨æ ¼çš„å­—æ®µ
 		Vector vec = new Vector(1, 1);
 		model = new DefaultTableModel(arrTmp, arrField);
 		jTable1 = new JTable(model);
@@ -154,7 +154,7 @@ public class DepartManager extends JFrame {
 		jTable1.setShowVerticalLines(true);
 	}
 
-	// »ñÈ¡ËùÑ¡µÄĞĞ
+	// è·å–æ‰€é€‰çš„è¡Œ
 	public void getM() {
 		intRow = jTable1.getSelectedRow();
 

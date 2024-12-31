@@ -15,11 +15,11 @@ import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 
 /**
- * 
- * Title: ÓÃ»§ÃÜÂëĞŞ¸Ä 
- * Description: ÓÃ»§ÃÜÂëĞŞ¸ÄÄ£¿é£¬¹ÜÀíÔ±ºÍÆÕÍ¨ÓÃ»§¶¼¿É¼û£¬¹ÜÀíÔ±¿ÉĞŞ¸ÄËùÓĞÓÃ»§ÃÜÂë£¬ÆÕÍ¨ÓÃ»§Ö»ÄÜĞŞ¸Ä±¾ÓÃ»§ÃÜÂë¡£
- * 
- * @author »Æ²ß£¬³Â×ÓÈ¨£¬µÔÀ¥Ñó£¬ÈÄÈï
+ *
+ * Title: ç”¨æˆ·å¯†ç ä¿®æ”¹
+ * Description: ç”¨æˆ·å¯†ç ä¿®æ”¹æ¨¡å—ï¼Œç®¡ç†å‘˜å’Œæ™®é€šç”¨æˆ·éƒ½å¯è§ï¼Œç®¡ç†å‘˜å¯ä¿®æ”¹æ‰€æœ‰ç”¨æˆ·å¯†ç ï¼Œæ™®é€šç”¨æˆ·åªèƒ½ä¿®æ”¹æœ¬ç”¨æˆ·å¯†ç ã€‚
+ *
+ * @author é»„ç­–ï¼Œé™ˆå­æƒï¼Œç¿Ÿæ˜†æ´‹ï¼Œé¥¶è•Š
  */
 
 public class UserPasswordFrame extends JFrame {
@@ -54,21 +54,21 @@ public class UserPasswordFrame extends JFrame {
 		contentPane = (JPanel) getContentPane();
 		contentPane.setLayout(null);
 		setSize(new Dimension(444, 340));
-		setTitle("ÓÃ»§ÃÜÂëĞŞ¸Ä");
+		setTitle("ç”¨æˆ·å¯†ç ä¿®æ”¹");
 		jLabel1.setFont(new java.awt.Font("Dialog", Font.BOLD, 20));
-		jLabel1.setText("ÓÃ  »§  ÃÜ  Âë  ĞŞ  ¸Ä");
+		jLabel1.setText("ç”¨  æˆ·  å¯†  ç   ä¿®  æ”¹");
 		jLabel1.setBounds(new Rectangle(112, 15, 204, 24));
 		jLabel2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jLabel2.setText("ÓÃ»§Ãû:");
+		jLabel2.setText("ç”¨æˆ·å:");
 		jLabel2.setBounds(new Rectangle(80, 72, 74, 23));
 		jLabel3.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jLabel3.setText("¾ÉÃÜÂë:");
+		jLabel3.setText("æ—§å¯†ç :");
 		jLabel3.setBounds(new Rectangle(80, 115, 74, 23));
 		jLabel4.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jLabel4.setText("ĞÂÃÜÂë:");
+		jLabel4.setText("æ–°å¯†ç :");
 		jLabel4.setBounds(new Rectangle(80, 159, 74, 23));
 		jLabel5.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jLabel5.setText("È·ÈÏĞÂÃÜÂë:");
+		jLabel5.setText("ç¡®è®¤æ–°å¯†ç :");
 		jLabel5.setBounds(new Rectangle(72, 203, 101, 23));
 		jTextField1.setEnabled(false);
 		jTextField1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 13));
@@ -85,12 +85,12 @@ public class UserPasswordFrame extends JFrame {
 		jButton1.setBounds(new Rectangle(87, 254, 86, 26));
 		jButton1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 13));
 		jButton1.setBorder(BorderFactory.createRaisedBevelBorder());
-		jButton1.setText("Ìá    ½»");
+		jButton1.setText("æ    äº¤");
 		jButton1.addActionListener(new MAPasswordFrameFrame_jButton1_actionAdapter(this));
 		jButton2.setBounds(new Rectangle(253, 254, 86, 26));
 		jButton2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 13));
 		jButton2.setBorder(BorderFactory.createRaisedBevelBorder());
-		jButton2.setText("ÍË    ³ö");
+		jButton2.setText("é€€    å‡º");
 		jButton2.addActionListener(new MAPasswordFrameFrame_jButton2_actionAdapter(this));
 		jOptionPane1.setBounds(new Rectangle(-8, 84, 262, 90));
 		jOptionPane1.setLayout(null);
@@ -112,24 +112,24 @@ public class UserPasswordFrame extends JFrame {
 		}
 	}
 
-	// ÍË³ö
+	// é€€å‡º
 	public void jButton2_actionPerformed(ActionEvent e) {
 		this.dispose();
 	}
 
-	// ĞŞ¸ÄÃÜÂë
+	// ä¿®æ”¹å¯†ç 
 	public void jButton1_actionPerformed(ActionEvent e) {
 		boolean a = false;
 		boolean b = true;
-		// Òì³£ÅĞ¶Ï
+		// å¼‚å¸¸åˆ¤æ–­
 		if (jTextField1.getText().trim() == null || jTextField1.getText().trim().length() == 0
 				|| jTextField1.getText().trim().length() > 20) {
-			jOptionPane1.showMessageDialog(this, "ÓÃ»§Ãû²»ÄÜÎª¿ÕÇÒ×î´ó³¤¶ÈÎª20¸ö×Ö·û£¡", "Ìá  Ê¾", JOptionPane.INFORMATION_MESSAGE, null);
+			jOptionPane1.showMessageDialog(this, "ç”¨æˆ·åä¸èƒ½ä¸ºç©ºä¸”æœ€å¤§é•¿åº¦ä¸º20ä¸ªå­—ç¬¦ï¼", "æ  ç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 		} else if (jPasswordField2.getText().trim().compareTo(jPasswordField3.getText().trim()) != 0) {
-			jOptionPane1.showMessageDialog(this, "ĞÂÃÜÂëÈ·ÈÏ´íÎó£¡", "Ìá  Ê¾", JOptionPane.INFORMATION_MESSAGE, null);
+			jOptionPane1.showMessageDialog(this, "æ–°å¯†ç ç¡®è®¤é”™è¯¯ï¼", "æ  ç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 		} else {
 			try {
-				// ¶ÔÔ­ÃÜÂë½øĞĞÑéÖ¤
+				// å¯¹åŸå¯†ç è¿›è¡ŒéªŒè¯
 				ResultSet rs = conn.getRs("select userName,userPwd from tb_user");
 				while (rs.next()) {
 					if (jTextField1.getText().trim().equals(rs.getString("userName").trim())
@@ -140,13 +140,13 @@ public class UserPasswordFrame extends JFrame {
 					}
 				}
 				if (b) {
-					jOptionPane1.showMessageDialog(this, "ÓÃ»§Ãû»òÃÜÂë´íÎó£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+					jOptionPane1.showMessageDialog(this, "ç”¨æˆ·åæˆ–å¯†ç é”™è¯¯ï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 				}
 				if (a) {
-					// ĞŞ¸ÄÃÜÂë
+					// ä¿®æ”¹å¯†ç 
 					conn.getUpdate("update tb_user set userPwd= '" + jPasswordField2.getText().trim()
 							+ "' where userName=('" + jTextField1.getText().trim() + "') ");
-					jOptionPane1.showMessageDialog(this, "¹§Ï²ÄúĞŞ¸Ä³É¹¦£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+					jOptionPane1.showMessageDialog(this, "æ­å–œæ‚¨ä¿®æ”¹æˆåŠŸï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 					jTextField1.setText("");
 					jPasswordField1.setText("");
 					jPasswordField2.setText("");

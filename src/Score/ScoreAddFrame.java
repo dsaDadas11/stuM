@@ -10,11 +10,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * 
- * Title: ³É¼¨Â¼Èë 
- * Description: ³É¼¨Â¼ÈëÄ£¿é
- * 
- * @author »Æ²ß£¬³Â×ÓÈ¨£¬µÔÀ¥Ñó£¬ÈÄÈï
+ *
+ * Title: æˆç»©å½•å…¥
+ * Description: æˆç»©å½•å…¥æ¨¡å—
+ *
+ * @author é»„ç­–ï¼Œé™ˆå­æƒï¼Œç¿Ÿæ˜†æ´‹ï¼Œé¥¶è•Š
  */
 
 public class ScoreAddFrame extends JFrame {
@@ -45,15 +45,15 @@ public class ScoreAddFrame extends JFrame {
 		contentPane = (JPanel) getContentPane();
 		contentPane.setLayout(null);
 		setSize(new Dimension(482, 300));
-		setTitle("³É¼¨Â¼Èë");
+		setTitle("æˆç»©å½•å…¥");
 		jLabel1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 20));
-		jLabel1.setText("³É  ¼¨  Â¼  Èë");
+		jLabel1.setText("æˆ  ç»©  å½•  å…¥");
 		jLabel1.setBounds(new Rectangle(178, 17, 126, 25));
 		jLabel3.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
-		jLabel3.setText("Ñ§ÉúÑ§ºÅ£º");
+		jLabel3.setText("å­¦ç”Ÿå­¦å·ï¼š");
 		jLabel3.setBounds(new Rectangle(75, 70, 81, 21));
 		jLabel4.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
-		jLabel4.setText("³É       ¼¨£º");
+		jLabel4.setText("æˆ       ç»©ï¼š");
 		jLabel4.setBounds(new Rectangle(75, 170, 77, 21));
 		jTextField2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
 		jTextField2.setBorder(BorderFactory.createLoweredBevelBorder());
@@ -66,17 +66,17 @@ public class ScoreAddFrame extends JFrame {
 		jButton1.setBounds(new Rectangle(103, 240, 90, 29));
 		jButton1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
 		jButton1.setBorder(BorderFactory.createRaisedBevelBorder());
-		jButton1.setText("Ìá    ½»");
+		jButton1.setText("æ    äº¤");
 		jButton1.addActionListener(new ScoreAddFrame_jButton1_actionAdapter(this));
 		jButton2.setBounds(new Rectangle(277, 240, 90, 29));
 		jButton2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
 		jButton2.setBorder(BorderFactory.createRaisedBevelBorder());
-		jButton2.setText("ÍË    ³ö");
+		jButton2.setText("é€€    å‡º");
 		jButton2.addActionListener(new ScoreAddFrame_jButton2_actionAdapter(this));
 		jOptionPane1.setBounds(new Rectangle(75, 261, 262, 90));
 		jOptionPane1.setLayout(null);
 		jLabel6.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
-		jLabel6.setText("¿Î       ³Ì£º");
+		jLabel6.setText("è¯¾       ç¨‹ï¼š");
 		jLabel6.setBounds(new Rectangle(75, 120, 82, 21));
 		jComboBox1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
 		jComboBox1.setBounds(new Rectangle(190, 120, 160, 25));
@@ -90,9 +90,9 @@ public class ScoreAddFrame extends JFrame {
 		contentPane.add(jTextField2);
 		contentPane.add(jComboBox1);
 		contentPane.add(jLabel6);
-		jComboBox1.addItem("ÇëÑ¡Ôñ");
+		jComboBox1.addItem("è¯·é€‰æ‹©");
 		try {
-			// Ñ¡Ôñ¿Î³Ì
+			// é€‰æ‹©è¯¾ç¨‹
 			ResultSet rs = sta.getRs("select * from tb_cource");
 			while (rs.next()) {
 				String xibu = rs.getString("courceName");
@@ -104,15 +104,15 @@ public class ScoreAddFrame extends JFrame {
 		}
 	}
 
-	// Â¼Èë
+	// å½•å…¥
 	public void InC() {
-		// Òì³£ÅĞ¶Ï
+		// å¼‚å¸¸åˆ¤æ–­
 		if (jTextField2.getText().length() == 0) {
-			jOptionPane1.showMessageDialog(this, "Ñ§ÉúÑ§ºÅ²»ÄÜÎª¿Õ£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+			jOptionPane1.showMessageDialog(this, "å­¦ç”Ÿå­¦å·ä¸èƒ½ä¸ºç©ºï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 		} else if (jComboBox1.getSelectedIndex() == 0) {
-			jOptionPane1.showMessageDialog(this, "ÇëÑ¡Ôñ¿Î³Ì£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+			jOptionPane1.showMessageDialog(this, "è¯·é€‰æ‹©è¯¾ç¨‹ï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 		} else if (jTextField3.getText().length() == 0) {
-			jOptionPane1.showMessageDialog(this, "³É¼¨²»ÄÜÎª¿Õ£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+			jOptionPane1.showMessageDialog(this, "æˆç»©ä¸èƒ½ä¸ºç©ºï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 		} else {
 			try {
 				boolean name = false;
@@ -124,12 +124,12 @@ public class ScoreAddFrame extends JFrame {
 					}
 				}
 				if (name) {
-					jOptionPane1.showMessageDialog(this, "¿Î³ÌÃû³ÆÒÑ¾­´æÔÚ£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+					jOptionPane1.showMessageDialog(this, "è¯¾ç¨‹åç§°å·²ç»å­˜åœ¨ï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 				} else {
 					sta.getUpdate("insert into tb_score (stuNumber,score,courceName) values ('"
 							+ jTextField2.getText().trim() + "','" + Float.valueOf(jTextField3.getText().trim()) + "','"
 							+ String.valueOf(jComboBox1.getSelectedItem()) + "')");
-					jOptionPane1.showMessageDialog(this, "¿Î³ÌĞÅÏ¢Ìá½»³É¹¦£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+					jOptionPane1.showMessageDialog(this, "è¯¾ç¨‹ä¿¡æ¯æäº¤æˆåŠŸï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 				}
 				rs.close();
 			} catch (Exception ce) {
@@ -138,12 +138,12 @@ public class ScoreAddFrame extends JFrame {
 		}
 	}
 
-	// Â¼Èë
+	// å½•å…¥
 	public void jButton1_actionPerformed(ActionEvent e) {
 		InC();
 	}
 
-	// ÍË³ö
+	// é€€å‡º
 	public void jButton2_actionPerformed(ActionEvent e) {
 		this.dispose();
 	}

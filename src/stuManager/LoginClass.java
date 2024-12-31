@@ -8,11 +8,11 @@ import javax.swing.UIManager;
 import java.awt.Dimension;
 
 /**
- * 
- * Title: µÇÂ¼Àà 
- * Description: µÇÂ½Ä£¿é£¬³ÌÐòµÄÈë¿ÚÀà
- * 
- * @author »Æ²ß£¬³Â×ÓÈ¨£¬µÔÀ¥Ñó£¬ÈÄÈï
+ *
+ * Title: ç™»å½•ç±»
+ * Description: ç™»é™†æ¨¡å—ï¼Œç¨‹åºçš„å…¥å£ç±»
+ *
+ * @author é»„ç­–ï¼Œé™ˆå­æƒï¼Œç¿Ÿæ˜†æ´‹ï¼Œé¥¶è•Š
  */
 
 public class LoginClass {
@@ -25,7 +25,7 @@ public class LoginClass {
 		} else {
 			frame.validate();
 		}
-		// µ÷Õû´°Ìå´óÐ¡
+		// è°ƒæ•´çª—ä½“å¤§å°
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		Dimension frameSize = frame.getSize();
 		if (frameSize.height > screenSize.height) {
@@ -39,7 +39,7 @@ public class LoginClass {
 		frame.setVisible(true);
 	}
 
-	// Ö÷·½·¨
+	// ä¸»æ–¹æ³•
 	public static void main(String[] args) {
 		SwingUtilities.invokeLater(new Runnable() {
 

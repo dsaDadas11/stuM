@@ -17,11 +17,11 @@ import javax.swing.JTextField;
 import db.dbConn;
 
 /**
- * 
- * Title: ÓÃ»§É¾³ı 
- * Description: ÓÃ»§É¾³ıÄ£¿é£¬Ö»¶Ô¹ÜÀíÔ±ÏÔÊ¾¡£
- * 
- * @author »Æ²ß£¬³Â×ÓÈ¨£¬µÔÀ¥Ñó£¬ÈÄÈï
+ *
+ * Title: ç”¨æˆ·åˆ é™¤
+ * Description: ç”¨æˆ·åˆ é™¤æ¨¡å—ï¼Œåªå¯¹ç®¡ç†å‘˜æ˜¾ç¤ºã€‚
+ *
+ * @author é»„ç­–ï¼Œé™ˆå­æƒï¼Œç¿Ÿæ˜†æ´‹ï¼Œé¥¶è•Š
  */
 
 public class UserDelete extends JFrame {
@@ -47,12 +47,12 @@ public class UserDelete extends JFrame {
 		contentPane = (JPanel) getContentPane();
 		contentPane.setLayout(null);
 		setSize(new Dimension(469, 315));
-		setTitle("É¾³ıÓÃ»§");
+		setTitle("åˆ é™¤ç”¨æˆ·");
 		jLabel1.setFont(new java.awt.Font("Dialog", Font.BOLD, 23));
-		jLabel1.setText("É¾  ³ı   ÓÃ   »§");
+		jLabel1.setText("åˆ   é™¤   ç”¨   æˆ·");
 		jLabel1.setBounds(new Rectangle(134, 12, 198, 27));
 		jLabel2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jLabel2.setText("ÓÃ»§Ãû:");
+		jLabel2.setText("ç”¨æˆ·å:");
 		jLabel2.setBounds(new Rectangle(90, 100, 68, 22));
 		jTextField1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 13));
 		jTextField1.setBorder(BorderFactory.createLoweredBevelBorder());
@@ -60,12 +60,12 @@ public class UserDelete extends JFrame {
 		jButton1.setBounds(new Rectangle(99, 180, 89, 25));
 		jButton1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 13));
 		jButton1.setBorder(BorderFactory.createRaisedBevelBorder());
-		jButton1.setText("È·    ÈÏ");
+		jButton1.setText("ç¡®    è®¤");
 		jButton1.addActionListener(new UserDeleteFrame_jButton1_actionAdapter(this));
 		jButton2.setBounds(new Rectangle(267, 180, 89, 25));
 		jButton2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 13));
 		jButton2.setBorder(BorderFactory.createRaisedBevelBorder());
-		jButton2.setText("ÍË    ³ö");
+		jButton2.setText("é€€    å‡º");
 		jButton2.addActionListener(new UserDeleteFrame_jButton2_actionAdapter(this));
 		jOptionPane1.setBounds(new Rectangle(0, 233, 262, 90));
 		jOptionPane1.setLayout(null);
@@ -77,36 +77,36 @@ public class UserDelete extends JFrame {
 		contentPane.add(jOptionPane1);
 	}
 
-	// ÍË³ö
+	// é€€å‡º
 	public void jButton2_actionPerformed(ActionEvent e) {
 		this.dispose();
 	}
 
-	// É¾³ıÓÃ»§
+	// åˆ é™¤ç”¨æˆ·
 	public void jButton1_actionPerformed(ActionEvent e) {
 		boolean isAdmin = false, noUser = true;
-		// Òì³£ÅĞ¶Ï
+		// å¼‚å¸¸åˆ¤æ–­
 		if (jTextField1.getText().length() == 0) {
-			jOptionPane1.showMessageDialog(this, "ÓÃ»§Ãû²»ÄÜÎª¿Õ£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+			jOptionPane1.showMessageDialog(this, "ç”¨æˆ·åä¸èƒ½ä¸ºç©ºï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 		} else {
 			try {
 				ResultSet rs = conn
 						.getRs("select * from tb_user where userName='" + jTextField1.getText().trim() + "'");
 				while (rs.next()) {
-					// ÅĞ¶ÏÊäÈëµÄÓÃ»§ÃûÊÇ·ñ´æÔÚ
+					// åˆ¤æ–­è¾“å…¥çš„ç”¨æˆ·åæ˜¯å¦å­˜åœ¨
 					noUser = false;
-					// ÅĞ¶ÏÉ¾³ıµÄÓÃ»§ÊÇ·ñ¹ÜÀíÔ±£¨ÎŞ·¨É¾³ı¹ÜÀíÔ±ÓÃ»§£©
+					// åˆ¤æ–­åˆ é™¤çš„ç”¨æˆ·æ˜¯å¦ç®¡ç†å‘˜ï¼ˆæ— æ³•åˆ é™¤ç®¡ç†å‘˜ç”¨æˆ·ï¼‰
 					if (1 == Integer.valueOf(rs.getString("userType").trim())) {
 						isAdmin = true;
 					}
 				}
 				if (noUser) {
-					jOptionPane1.showMessageDialog(this, "¸ÃÓÃ»§Ãû²»´æÔÚ£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+					jOptionPane1.showMessageDialog(this, "è¯¥ç”¨æˆ·åä¸å­˜åœ¨ï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 				} else if (isAdmin) {
-					jOptionPane1.showMessageDialog(this, "ÎŞ·¨É¾³ı¹ÜÀíÔ±ÕËºÅ£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+					jOptionPane1.showMessageDialog(this, "æ— æ³•åˆ é™¤ç®¡ç†å‘˜è´¦å·ï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 				} else {
 					conn.getUpdate("delete from tb_user where userName='" + jTextField1.getText().trim() + "'");
-					jOptionPane1.showMessageDialog(this, "¹§Ï²ÄúÉ¾³ıÓÃ»§³É¹¦£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+					jOptionPane1.showMessageDialog(this, "æ­å–œæ‚¨åˆ é™¤ç”¨æˆ·æˆåŠŸï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 				}
 				rs.close();
 			} catch (Exception ce) {
