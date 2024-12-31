@@ -18,10 +18,10 @@ import java.sql.ResultSet;
 
 /**
  * 
- * Title: µÇÂ¼Ä£¿é 
- * Description: µÇÂ¼Ä£¿éµÄ¿ÉÊÓ»¯ÊµÏÖ
+ * Title: ï¿½ï¿½Â¼Ä£ï¿½ï¿½ 
+ * Description: ï¿½ï¿½Â¼Ä£ï¿½ï¿½Ä¿ï¿½ï¿½Ó»ï¿½Êµï¿½ï¿½
  * 
- * @author Ð»ÃÏ»Ô
+ * @author 
  */
 
 public class LoginFrame extends JFrame {
@@ -58,20 +58,20 @@ public class LoginFrame extends JFrame {
 		contentPane = (JPanel) getContentPane();
 		contentPane.setLayout(null);
 		setSize(new Dimension(504, 344));
-		setTitle("»¶Ó­µÇÂ¼Ñ§Éú¹ÜÀíÏµÍ³");
+		setTitle("ï¿½ï¿½Ó­ï¿½ï¿½Â¼Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÍ³");
 		jLabel_welcomeTitle.setFont(new java.awt.Font("Dialog", Font.BOLD, 25));
 		jLabel_welcomeTitle.setToolTipText("");
-		jLabel_welcomeTitle.setText("»¶  Ó­  µÇ  Â¼  Ñ§  Éú");
+		jLabel_welcomeTitle.setText("ï¿½ï¿½  Ó­  ï¿½ï¿½  Â¼  Ñ§  ï¿½ï¿½");
 		jLabel_welcomeTitle.setBounds(new Rectangle(128, 19, 246, 30));
 		jLabel_systemTitle.setFont(new java.awt.Font("Dialog", Font.BOLD, 25));
 		jLabel_systemTitle.setToolTipText("");
-		jLabel_systemTitle.setText("¹Ü  Àí  Ïµ  Í³");
+		jLabel_systemTitle.setText("ï¿½ï¿½  ï¿½ï¿½  Ïµ  Í³");
 		jLabel_systemTitle.setBounds(new Rectangle(173, 61, 164, 29));
 		jLabel_userName.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jLabel_userName.setText("ÓÃ»§Ãû:");
+		jLabel_userName.setText("ï¿½Ã»ï¿½ï¿½ï¿½:");
 		jLabel_userName.setBounds(new Rectangle(95, 123, 77, 25));
 		jLabel_pwd.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jLabel_pwd.setText("ÃÜ    Âë:");
+		jLabel_pwd.setText("ï¿½ï¿½    ï¿½ï¿½:");
 		jLabel_pwd.setBounds(new Rectangle(95, 172, 74, 21));
 		jTextField_userName.setFont(new java.awt.Font("Dialog", Font.PLAIN, 13));
 		jTextField_userName.setBorder(BorderFactory.createLoweredBevelBorder());
@@ -79,22 +79,22 @@ public class LoginFrame extends JFrame {
 		jButton_Login.setBounds(new Rectangle(124, 243, 93, 30));
 		jButton_Login.setFont(new java.awt.Font("Dialog", Font.PLAIN, 13));
 		jButton_Login.setBorder(BorderFactory.createRaisedBevelBorder());
-		jButton_Login.setText("µÇ  Â¼");
+		jButton_Login.setText("ï¿½ï¿½  Â¼");
 		jButton_Login.addActionListener(new LoginFrame_jButton_Login_actionAdapter(this));
 		jButton_quit.setBounds(new Rectangle(286, 243, 93, 30));
 		jButton_quit.setFont(new java.awt.Font("Dialog", Font.PLAIN, 13));
 		jButton_quit.setBorder(BorderFactory.createRaisedBevelBorder());
-		jButton_quit.setText("×¢  ²á");
+		jButton_quit.setText("×¢  ï¿½ï¿½");
 		jButton_quit.addActionListener(new LoginFrame_jButton_SignUp_actionAdapter(this));
 		jLabel_systemTitle2.setFont(new java.awt.Font("Dialog", Font.BOLD, 25));
 		jLabel_systemTitle2.setForeground(Color.blue);
 		jLabel_systemTitle2.setToolTipText("");
-		jLabel_systemTitle2.setText("¹Ü  Àí  Ïµ  Í³");
+		jLabel_systemTitle2.setText("ï¿½ï¿½  ï¿½ï¿½  Ïµ  Í³");
 		jLabel_systemTitle2.setBounds(new Rectangle(173, 62, 164, 29));
 		jLabel_welcomeTitle2.setFont(new java.awt.Font("Dialog", Font.BOLD, 25));
 		jLabel_welcomeTitle2.setForeground(Color.blue);
 		jLabel_welcomeTitle2.setToolTipText("");
-		jLabel_welcomeTitle2.setText("»¶  Ó­  µÇ  Â¼  Ñ§  Éú");
+		jLabel_welcomeTitle2.setText("ï¿½ï¿½  Ó­  ï¿½ï¿½  Â¼  Ñ§  ï¿½ï¿½");
 		jLabel_welcomeTitle2.setBounds(new Rectangle(128, 20, 246, 30));
 		jOptionPane_LoginFeedback.setBounds(new Rectangle(28, 263, 262, 90));
 		jOptionPane_LoginFeedback.setLayout(null);
@@ -118,7 +118,7 @@ public class LoginFrame extends JFrame {
 		contentPane.add(jOptionPane_LoginFeedback);
 	}
 	
-	// Ìí¼ÓÓÃ»§Ä£¿é
+	// ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ä£ï¿½ï¿½
 		public void jButton_SignUp_actionPerformed(ActionEvent e) {
 			UserAddFrame siadd = new UserAddFrame();
 			siadd.setLocation(400, 200);
@@ -128,12 +128,12 @@ public class LoginFrame extends JFrame {
 			siadd.validate();
 		}
 
-	// µÇÂ¼
+	// ï¿½ï¿½Â¼
 	public void jButton_Login_actionPerformed(ActionEvent e) {
 		boolean cheng = false;
-		// Òì³£ÅÐ¶Ï
+		// ï¿½ì³£ï¿½Ð¶ï¿½
 		if (jTextField_userName.getText().length() == 0) {
-			jOptionPane_LoginFeedback.showMessageDialog(this, "ÓÃ»§Ãû²»ÄÜÎª¿Õ£¡", "Ìá Ê¾",
+			jOptionPane_LoginFeedback.showMessageDialog(this, "ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½", "ï¿½ï¿½ Ê¾",
 					jOptionPane_LoginFeedback.INFORMATION_MESSAGE);
 		} else {
 			try {
@@ -157,7 +157,7 @@ public class LoginFrame extends JFrame {
 					}
 				}
 				if (cheng) {
-					jOptionPane_LoginFeedback.showMessageDialog(this, "ÓÃ»§Ãû»òÃÜÂë´íÎó£¡", "Ìá Ê¾",
+					jOptionPane_LoginFeedback.showMessageDialog(this, "ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ Ê¾",
 							jOptionPane_LoginFeedback.INFORMATION_MESSAGE);
 				}
 				rs.close();
