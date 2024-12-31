@@ -19,7 +19,7 @@ import java.util.*;
  * Title: 院系管理 
  * Description: 院系管理模块，可以对院系信息进行查询，是修改和删除的入口。
  * 
- * @author 谢孟辉
+ * @author 黄策，陈子权，翟昆洋，饶蕊
  */
 
 public class DepartManager extends JFrame {

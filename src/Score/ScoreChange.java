@@ -15,7 +15,7 @@ import javax.swing.*;
  * Title: 成绩修改 
  * Description: 成绩修改模块
  * 
- * @author 谢孟辉
+ * @author 黄策，陈子权，翟昆洋，饶蕊
  */
 
 public class ScoreChange extends JFrame {

@@ -19,7 +19,7 @@ import java.awt.*;
  * Title: 成绩管理 
  * Description: 成绩管理模块，可以查询成绩，是成绩修改和删除的入口。
  * 
- * @author 谢孟辉
+ * @author 黄策，陈子权，翟昆洋，饶蕊
  */
 
 public class ScoreManager extends JFrame {

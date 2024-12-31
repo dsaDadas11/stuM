@@ -14,7 +14,7 @@ import java.sql.ResultSet;
  * Title: 学生信息修改 
  * Description: 学生信息修改模块
  * 
- * @author 谢孟辉
+ * @author 黄策，陈子权，翟昆洋，饶蕊
  */
 
 public class StudentChange extends JFrame {

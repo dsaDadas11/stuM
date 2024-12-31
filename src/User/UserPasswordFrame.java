@@ -19,7 +19,7 @@ import java.sql.ResultSet;
  * Title: 用户密码修改 
  * Description: 用户密码修改模块，管理员和普通用户都可见，管理员可修改所有用户密码，普通用户只能修改本用户密码。
  * 
- * @author 谢孟辉
+ * @author 黄策，陈子权，翟昆洋，饶蕊
  */
 
 public class UserPasswordFrame extends JFrame {

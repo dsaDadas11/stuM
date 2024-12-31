@@ -21,7 +21,7 @@ import db.dbConn;
  * Title: 用户删除 
  * Description: 用户删除模块，只对管理员显示。
  * 
- * @author 谢孟辉
+ * @author 黄策，陈子权，翟昆洋，饶蕊
  */
 
 public class UserDelete extends JFrame {

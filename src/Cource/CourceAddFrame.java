@@ -19,7 +19,7 @@ import java.awt.event.ActionListener;
  * Title: 课程录入 
  * Description: 课程录入模块
  * 
- * @author 谢孟辉
+ * @author 黄策，陈子权，翟昆洋，饶蕊
  */
 
 public class CourceAddFrame extends JFrame {

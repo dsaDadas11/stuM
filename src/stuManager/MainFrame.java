@@ -27,8 +27,8 @@ import User.UserPasswordFrame;
  * 
  * Title: 主界面 
  * Description: 主界面模块，有对学生、班级、院系、课程、成绩、用户的录入与管理的菜单
- * 
- * @author 谢孟辉
+ *
+ * @author 黄策，陈子权，翟昆洋，饶蕊
  */
 
 public class MainFrame extends JFrame {

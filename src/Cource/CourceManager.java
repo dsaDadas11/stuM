@@ -22,7 +22,7 @@ import java.awt.*;
  * Title: 课程管理 
  * Description: 课程管理模块，实现课程查询，同时也是课程修改、删除的入口。
  * 
- * @author 谢孟辉
+ * @author 黄策，陈子权，翟昆洋，饶蕊
  */
 
 public class CourceManager extends JFrame {

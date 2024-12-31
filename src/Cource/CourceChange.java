@@ -21,7 +21,7 @@ import javax.swing.*;
  * Title: 课程修改 
  * Description: 课程修改模块
  * 
- * @author 谢孟辉
+ * @author 黄策，陈子权，翟昆洋，饶蕊
  */
 
 public class CourceChange extends JFrame {

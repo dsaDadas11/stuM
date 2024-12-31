@@ -19,7 +19,7 @@ import java.awt.event.ActionListener;
  * Title: 课程添加
  * Description: 实现课程添加的模块
  * 
- * @author 谢孟辉
+ * @author 黄策，陈子权，翟昆洋，饶蕊
  * 
  */
 

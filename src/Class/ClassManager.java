@@ -25,7 +25,7 @@ import java.util.*;
  * Title: 课程管理 
  * Description: 实现课程管理模块，包含课程查询，同时是课程修改和删除的入口。
  * 
- * @author 谢孟辉
+ * @author 黄策，陈子权，翟昆洋，饶蕊
  */
 
 public class ClassManager extends JFrame {

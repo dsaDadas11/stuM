@@ -7,7 +7,7 @@ import java.sql.*;
  * Title: 数据库连接 
  * Description: 数据库连接模块
  * 
- * @author 谢孟辉
+ * @author 黄策，陈子权，翟昆洋，饶蕊
  */
 
 public class dbConn {

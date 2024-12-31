@@ -14,7 +14,7 @@ import java.awt.event.ActionListener;
  * Title: 院系信息录入 
  * Description: 院系信息录入模块，实现对学院、专业的录入。
  * 
- * @author 谢孟辉
+ * @author 黄策，陈子权，翟昆洋，饶蕊
  */
 
 public class DepartAddFrame extends JFrame {

@@ -21,6 +21,7 @@ import java.sql.ResultSet;
  * Title: 登录模块
  * Description: 登录模块的可视化实现
  *
+ * @author 黄策，陈子权，翟昆洋，饶蕊
  */
 
 public class LoginFrame extends JFrame {

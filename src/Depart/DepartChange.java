@@ -15,7 +15,7 @@ import java.awt.event.ActionListener;
  * Title: 院系修改 
  * Description: 院系信息修改模块
  * 
- * @author 谢孟辉
+ * @author 黄策，陈子权，翟昆洋，饶蕊
  */
 
 public class DepartChange extends JFrame {
