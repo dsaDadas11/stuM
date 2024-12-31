@@ -18,11 +18,11 @@ import java.util.*;
 import java.awt.*;
 
 /**
- * 
- * Title: ¿Î³Ì¹ÜÀí 
- * Description: ¿Î³Ì¹ÜÀíÄ£¿é£¬ÊµÏÖ¿Î³Ì²éÑ¯£¬Í¬Ê±Ò²ÊÇ¿Î³ÌĞŞ¸Ä¡¢É¾³ıµÄÈë¿Ú¡£
- * 
- * @author »Æ²ß£¬³Â×ÓÈ¨£¬µÔÀ¥Ñó£¬ÈÄÈï
+ *
+ * Title: è¯¾ç¨‹ç®¡ç†
+ * Description: è¯¾ç¨‹ç®¡ç†æ¨¡å—ï¼Œå®ç°è¯¾ç¨‹æŸ¥è¯¢ï¼ŒåŒæ—¶ä¹Ÿæ˜¯è¯¾ç¨‹ä¿®æ”¹ã€åˆ é™¤çš„å…¥å£ã€‚
+ *
+ * @author é»„ç­–ï¼Œé™ˆå­æƒï¼Œç¿Ÿæ˜†æ´‹ï¼Œé¥¶è•Š
  */
 
 public class CourceManager extends JFrame {
@@ -37,7 +37,7 @@ public class CourceManager extends JFrame {
 	dbConn sta = new dbConn();
 	String sql;
 	Object[][] arrData = {};
-	String[] arrField = { "¿Î³Ì±àºÅ", "×¨ÒµÃû³Æ", "¿Î³ÌÃû³Æ", "¿Î³ÌÑ§·Ö" };
+	String[] arrField = { "è¯¾ç¨‹ç¼–å·", "ä¸“ä¸šåç§°", "è¯¾ç¨‹åç§°", "è¯¾ç¨‹å­¦åˆ†" };
 	DefaultTableModel model = new DefaultTableModel();
 	int intRow;
 	static int find;
@@ -55,19 +55,19 @@ public class CourceManager extends JFrame {
 	private void jbInit() throws Exception {
 		getContentPane().setLayout(xYLayout1);
 		jLabel1.setFont(new java.awt.Font("Dialog", Font.BOLD, 20));
-		jLabel1.setText("¿Î  ³Ì  ¹Ü  Àí");
+		jLabel1.setText("è¯¾  ç¨‹  ç®¡  ç†");
 		jScrollPane1.setBorder(BorderFactory.createEtchedBorder());
 		jButton1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jButton1.setText("ĞŞ   ¸Ä");
+		jButton1.setText("ä¿®   æ”¹");
 		jButton1.addActionListener(new CourceF_jButton1_actionAdapter(this));
 		jButton2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jButton2.setText("·µ   »Ø");
+		jButton2.setText("è¿”   å›");
 		jButton2.addActionListener(new CourceF_jButton2_actionAdapter(this));
 		xYLayout1.setWidth(550);
 		xYLayout1.setHeight(560);
-		this.setTitle("¿Î³Ì¹ÜÀí");
+		this.setTitle("è¯¾ç¨‹ç®¡ç†");
 		jButton6.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jButton6.setText("É¾   ³ı");
+		jButton6.setText("åˆ    é™¤");
 		jButton6.addActionListener(new CourceF_jButton6_actionAdapter(this));
 		jScrollPane1.getViewport().add(jTable1);
 		this.getContentPane().add(jLabel1, new XYConstraints(208, 13, 135, 43));
@@ -76,14 +76,14 @@ public class CourceManager extends JFrame {
 		this.getContentPane().add(jScrollPane1, new XYConstraints(18, 60, 490, 400));
 		this.getContentPane().add(jButton6, new XYConstraints(224, 480, 100, -1));
 
-		// ÓÃ»§µÈ¼¶ÅĞ¶Ï
-		// 1Îª¹ÜÀíÔ±
+		// ç”¨æˆ·ç­‰çº§åˆ¤æ–­
+		// 1ä¸ºç®¡ç†å‘˜
 		if (MainFrame.level.equals("1")) {
-			// ²»Òş²ØÈÎºÎ¹¦ÄÜ
+			// ä¸éšè—ä»»ä½•åŠŸèƒ½
 		}
-		// 2ÎªÆÕÍ¨ÓÃ»§
+		// 2ä¸ºæ™®é€šç”¨æˆ·
 		else if (MainFrame.level.equals("2")) {
-			// Òş²Ø²¿·Ö¹¦ÄÜ
+			// éšè—éƒ¨åˆ†åŠŸèƒ½
 			jButton1.setVisible(false);
 			jButton6.setVisible(false);
 		}
@@ -93,7 +93,7 @@ public class CourceManager extends JFrame {
 
 	}
 
-	// ²éÑ¯ÏÔÊ¾
+	// æŸ¥è¯¢æ˜¾ç¤º
 	public void UpdateRecord() {
 		Object[][] arrTmp = {};
 		Vector vec = new Vector(1, 1);
@@ -126,11 +126,11 @@ public class CourceManager extends JFrame {
 
 	}
 
-	// »ñÈ¡Ñ¡¶¨µÄĞĞ
+	// è·å–é€‰å®šçš„è¡Œ
 	public void getM() {
 		intRow = jTable1.getSelectedRow();
 		if (intRow == -1) {
-			jOptionPane1.showMessageDialog(this, "ÇëÑ¡ÔñÒªĞŞ¸ÄµÄ¿Î³Ì£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+			jOptionPane1.showMessageDialog(this, "è¯·é€‰æ‹©è¦ä¿®æ”¹çš„è¯¾ç¨‹ï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 			return;
 		}
 		try {
@@ -142,12 +142,12 @@ public class CourceManager extends JFrame {
 
 	}
 
-	// ÍË³ö
+	// é€€å‡º
 	public void jButton2_actionPerformed(ActionEvent e) {
 		this.dispose();
 	}
 
-	// ĞŞ¸Ä
+	// ä¿®æ”¹
 	public void jButton1_actionPerformed(ActionEvent e) {
 		getM();
 		if (find > 0) {
@@ -161,15 +161,15 @@ public class CourceManager extends JFrame {
 		}
 	}
 
-	// É¾³ı
+	// åˆ é™¤
 	public void jButton6_actionPerformed(ActionEvent e) {
 		getM();
 		if (intRow == -1) {
-			jOptionPane1.showMessageDialog(this, "ÇëÑ¡ÔñÒªÉ¾³ıµÄ¿Î³Ì£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+			jOptionPane1.showMessageDialog(this, "è¯·é€‰æ‹©è¦åˆ é™¤çš„è¯¾ç¨‹ï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 		}
 		try {
 			sta.getUpdate("delete from tb_cource where courceId='" + Integer.valueOf(find) + "'");
-			jOptionPane1.showMessageDialog(this, "É¾³ı³É¹¦£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+			jOptionPane1.showMessageDialog(this, "åˆ é™¤æˆåŠŸï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 		} catch (Exception ce) {
 			System.out.println(ce.getMessage());
 		}

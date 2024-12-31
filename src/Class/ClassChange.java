@@ -15,11 +15,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * 
- * Title: °à¼¶ĞÅÏ¢ĞŞ¸Ä 
- * Description: °à¼¶ĞÅÏ¢ĞŞ¸ÄÄ£¿é
- * 
- * @author »Æ²ß£¬³Â×ÓÈ¨£¬µÔÀ¥Ñó£¬ÈÄÈï
+ *
+ * Title: ç­çº§ä¿¡æ¯ä¿®æ”¹
+ * Description: ç­çº§ä¿¡æ¯ä¿®æ”¹æ¨¡å—
+ *
+ * @author é»„ç­–ï¼Œé™ˆå­æƒï¼Œç¿Ÿæ˜†æ´‹ï¼Œé¥¶è•Š
  */
 
 public class ClassChange extends JFrame {
@@ -51,15 +51,15 @@ public class ClassChange extends JFrame {
 		contentPane = (JPanel) getContentPane();
 		contentPane.setLayout(null);
 		setSize(new Dimension(465, 280));
-		setTitle("°à¼¶ĞŞ¸Ä");
+		setTitle("ç­çº§ä¿®æ”¹");
 		jLabel1.setFont(new java.awt.Font("Dialog", Font.BOLD, 20));
-		jLabel1.setText("°à  ¼¶  ĞÅ  Ï¢  ĞŞ  ¸Ä");
+		jLabel1.setText("ç­  çº§  ä¿¡  æ¯  ä¿®  æ”¹");
 		jLabel1.setBounds(new Rectangle(136, 20, 212, 25));
 		jLabel2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jLabel2.setText("°à¼¶Ãû³Æ:");
+		jLabel2.setText("ç­çº§åç§°:");
 		jLabel2.setBounds(new Rectangle(80, 80, 90, 20));
 		jLabel3.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jLabel3.setText("ËùÊôÑ§Ôº:");
+		jLabel3.setText("æ‰€å±å­¦é™¢:");
 		jLabel3.setBounds(new Rectangle(80, 130, 90, 20));
 		jTextField1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
 		jTextField1.setBorder(BorderFactory.createLoweredBevelBorder());
@@ -67,13 +67,13 @@ public class ClassChange extends JFrame {
 		jButton1.setBounds(new Rectangle(102, 223, 96, 29));
 		jButton1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
 		jButton1.setBorder(BorderFactory.createRaisedBevelBorder());
-		jButton1.setText("ĞŞ    ¸Ä");
+		jButton1.setText("ä¿®    æ”¹");
 		jButton1.addActionListener(new ClassU_jButton1_actionAdapter(this));
 		jButton2.setBounds(new Rectangle(265, 221, 96, 31));
 		jButton2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
 		jButton2.setBorder(BorderFactory.createRaisedBevelBorder());
 		jButton2.setToolTipText("");
-		jButton2.setText("ÍË    ³ö");
+		jButton2.setText("é€€    å‡º");
 		jButton2.addActionListener(new ClassU_jButton2_actionAdapter(this));
 		jOptionPane1.setBounds(new Rectangle(106, 258, 262, 90));
 		jOptionPane1.setLayout(null);
@@ -81,7 +81,7 @@ public class ClassChange extends JFrame {
 		jComboBox1.setBounds(new Rectangle(180, 130, 180, 25));
 		jComboBox1.addActionListener(new ClassU_jComboBox1_actionAdapter(this));
 		jLabel4.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jLabel4.setText("ËùÊô×¨Òµ£º");
+		jLabel4.setText("æ‰€å±ä¸“ä¸šï¼š");
 		jLabel4.setBounds(new Rectangle(80, 180, 90, 20));
 		jComboBox2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
 		jComboBox2.setEditable(true);
@@ -96,8 +96,8 @@ public class ClassChange extends JFrame {
 		contentPane.add(jComboBox2);
 		contentPane.add(jButton2);
 		contentPane.add(jButton1);
-		jComboBox1.addItem("ÇëÑ¡ÔñÑ§Ôº");
-		// Ñ¡ÔñÑ§Ôº
+		jComboBox1.addItem("è¯·é€‰æ‹©å­¦é™¢");
+		// é€‰æ‹©å­¦é™¢
 		try {
 			ResultSet rs = conn.getRs("select * from tb_depart ");
 			while (rs.next()) {
@@ -111,10 +111,10 @@ public class ClassChange extends JFrame {
 		xianshi();
 	}
 
-	// Ñ¡Ôñ×¨Òµ
+	// é€‰æ‹©ä¸“ä¸š
 	public void zhuanye() {
 		jComboBox2.removeAllItems();
-		jComboBox2.addItem("ÇëÑ¡Ôñ×¨Òµ");
+		jComboBox2.addItem("è¯·é€‰æ‹©ä¸“ä¸š");
 		try {
 
 			ResultSet rs = conn.getRs(
@@ -128,7 +128,7 @@ public class ClassChange extends JFrame {
 		}
 	}
 
-	// ´æÏÂÑ¡¶¨Ñ§Ôºµ½xueyuan
+	// å­˜ä¸‹é€‰å®šå­¦é™¢åˆ°xueyuan
 	public void xueYuan() {
 		String sel = String.valueOf(jComboBox1.getSelectedItem());
 
@@ -143,7 +143,7 @@ public class ClassChange extends JFrame {
 		}
 	}
 
-	// ´æÏÂÑ¡¶¨×¨Òµµ½zhuanye
+	// å­˜ä¸‹é€‰å®šä¸“ä¸šåˆ°zhuanye
 	public void zhuanYe() {
 		String sel = String.valueOf(jComboBox2.getSelectedItem());
 
@@ -158,25 +158,25 @@ public class ClassChange extends JFrame {
 		}
 	}
 
-	// ÍË³ö
+	// é€€å‡º
 	public void jButton2_actionPerformed(ActionEvent e) {
 		this.dispose();
 	}
 
-	// ĞŞ¸Ä
+	// ä¿®æ”¹
 	public void jButton1_actionPerformed(ActionEvent e) {
-		// Òì³£ÅĞ¶Ï
+		// å¼‚å¸¸åˆ¤æ–­
 		if (this.jTextField1.getText().trim().length() == 0) {
-			jOptionPane1.showMessageDialog(this, "°à¼¶Ãû³Æ²»ÄÜÎª¿Õ¡£", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+			jOptionPane1.showMessageDialog(this, "ç­çº§åç§°ä¸èƒ½ä¸ºç©ºã€‚", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 		} else if (jComboBox1.getSelectedIndex() == 0) {
-			jOptionPane1.showMessageDialog(this, "ÇëÑ¡ÔñËùÊôÑ§Ôº£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+			jOptionPane1.showMessageDialog(this, "è¯·é€‰æ‹©æ‰€å±å­¦é™¢ï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 		} else if (jComboBox2.getSelectedIndex() == 0) {
-			jOptionPane1.showMessageDialog(this, "ÇëÑ¡ÔñËùÊô×¨Òµ£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+			jOptionPane1.showMessageDialog(this, "è¯·é€‰æ‹©æ‰€å±ä¸“ä¸šï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 		} else {
 			xueYuan();
 			zhuanYe();
 			try {
-				// ²»ÔÊĞíÍ¬Ò»¸ö×¨ÒµÓĞÁ½¸öÒ»ÑùµÄ°à¼¶
+				// ä¸å…è®¸åŒä¸€ä¸ªä¸“ä¸šæœ‰ä¸¤ä¸ªä¸€æ ·çš„ç­çº§
 				boolean classname = false;
 				ResultSet rs = conn.getRs("select className from tb_class where specName='"
 						+ String.valueOf(jComboBox2.getSelectedItem()) + "'");
@@ -186,12 +186,12 @@ public class ClassChange extends JFrame {
 					}
 				}
 				if (classname) {
-					jOptionPane1.showMessageDialog(this, "¸Ã°à¼¶Ãû³ÆÒÑ¾­´æÔÚ£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+					jOptionPane1.showMessageDialog(this, "è¯¥ç­çº§åç§°å·²ç»å­˜åœ¨ï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 				} else {
 					conn.getUpdate(
 							"update tb_class set className='" + jTextField1.getText().trim() + "',specName='" + zhuanye
 									+ "', departName='" + xueyuan + "' where classId='" + Integer.valueOf(find) + "'");
-					jOptionPane1.showMessageDialog(this, "¹§Ï²Äú°à¼¶ĞÅÏ¢ĞŞ¸Ä³É¹¦£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+					jOptionPane1.showMessageDialog(this, "æ­å–œæ‚¨ç­çº§ä¿¡æ¯ä¿®æ”¹æˆåŠŸï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 				}
 			} catch (Exception ce) {
 				System.out.println(ce);
@@ -199,13 +199,13 @@ public class ClassChange extends JFrame {
 		}
 	}
 
-	// Ñ¡Ôñ´¥·¢
+	// é€‰æ‹©è§¦å‘
 	public void jComboBox1_actionPerformed(ActionEvent e) {
 		zhuanye();
 		jComboBox2.setEnabled(true);
 	}
 
-	// Ñ¡¶¨ĞĞºóÔÚĞŞ¸Ä½çÃæÏÔÊ¾Ñ¡¶¨Ä¬ÈÏÖµ
+	// é€‰å®šè¡Œååœ¨ä¿®æ”¹ç•Œé¢æ˜¾ç¤ºé€‰å®šé»˜è®¤å€¼
 	public void xianshi() {
 		if (find == null)
 			return;

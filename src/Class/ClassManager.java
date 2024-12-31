@@ -21,11 +21,11 @@ import javax.swing.table.DefaultTableModel;
 import java.util.*;
 
 /**
- * 
- * Title: ¿Î³Ì¹ÜÀí 
- * Description: ÊµÏÖ¿Î³Ì¹ÜÀíÄ£¿é£¬°üº¬¿Î³Ì²éÑ¯£¬Í¬Ê±ÊÇ¿Î³ÌĞŞ¸ÄºÍÉ¾³ıµÄÈë¿Ú¡£
- * 
- * @author »Æ²ß£¬³Â×ÓÈ¨£¬µÔÀ¥Ñó£¬ÈÄÈï
+ *
+ * Title: è¯¾ç¨‹ç®¡ç†
+ * Description: å®ç°è¯¾ç¨‹ç®¡ç†æ¨¡å—ï¼ŒåŒ…å«è¯¾ç¨‹æŸ¥è¯¢ï¼ŒåŒæ—¶æ˜¯è¯¾ç¨‹ä¿®æ”¹å’Œåˆ é™¤çš„å…¥å£ã€‚
+ *
+ * @author é»„ç­–ï¼Œé™ˆå­æƒï¼Œç¿Ÿæ˜†æ´‹ï¼Œé¥¶è•Š
  */
 
 public class ClassManager extends JFrame {
@@ -55,7 +55,7 @@ public class ClassManager extends JFrame {
 	JButton jButton6 = new JButton();
 	dbConn conn = new dbConn();
 	Object[][] arrData = {};
-	String[] arrField = { "°à¼¶±àºÅ", "Ñ§ÔºÃû³Æ", "×¨ÒµÃû³Æ", "°à¼¶Ãû³Æ" };
+	String[] arrField = { "ç­çº§ç¼–å·", "å­¦é™¢åç§°", "ä¸“ä¸šåç§°", "ç­çº§åç§°" };
 	JOptionPane jOptionPane1 = new JOptionPane();
 	DefaultTableModel model = new DefaultTableModel();
 	String sql, find;
@@ -73,55 +73,55 @@ public class ClassManager extends JFrame {
 		getContentPane().setLayout(xYLayout1);
 		xYLayout1.setWidth(530);
 		xYLayout1.setHeight(540);
-		jLabel1.setFont(new java.awt.Font("ºÚÌå", Font.PLAIN, 20));
-		jLabel1.setText("°à ¼¶ ĞÅ Ï¢ ¹Ü Àí");
+		jLabel1.setFont(new java.awt.Font("é»‘ä½“", Font.PLAIN, 20));
+		jLabel1.setText("ç­ çº§ ä¿¡ æ¯ ç®¡ ç†");
 		jLabel2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
-		jLabel2.setText("ÇëÑ¡ÔñÑ§Ôº£º");
+		jLabel2.setText("è¯·é€‰æ‹©å­¦é™¢ï¼š");
 		jLabel3.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
-		jLabel3.setText("ÇëÑ¡ÔñÑ§Ôº£º");
+		jLabel3.setText("è¯·é€‰æ‹©å­¦é™¢ï¼š");
 		jLabel4.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
-		jLabel4.setText("ÇëÊäÈë°à¼¶£º");
+		jLabel4.setText("è¯·è¾“å…¥ç­çº§ï¼š");
 		jComboBox1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
 		jComboBox2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
 		jComboBox2.setEditable(false);
 		jComboBox2.addActionListener(new ClassManager_jComboBox2_actionAdapter(this));
 		jTextField1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
 		jRadioButton1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
-		jRadioButton1.setText("°´Ñ§Ôº²éÑ¯£º");
+		jRadioButton1.setText("æŒ‰å­¦é™¢æŸ¥è¯¢ï¼š");
 		jRadioButton1.addItemListener(new ClassManager_jRadioButton1_itemAdapter(this));
 		jRadioButton1.addActionListener(new ClassManager_jRadioButton1_actionAdapter(this));
 		jPanel1.setBorder(BorderFactory.createEtchedBorder());
 		jPanel1.setLayout(xYLayout2);
 		jRadioButton2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
-		jRadioButton2.setText("°´×¨Òµ²éÑ¯£º");
+		jRadioButton2.setText("æŒ‰ä¸“ä¸šæŸ¥è¯¢ï¼š");
 		jRadioButton2.addItemListener(new ClassManager_jRadioButton2_itemAdapter(this));
 		jRadioButton2.addActionListener(new ClassManager_jRadioButton2_actionAdapter(this));
 		jRadioButton3.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
-		jRadioButton3.setText("°´Ãû³Æ²éÑ¯£º");
+		jRadioButton3.setText("æŒ‰åç§°æŸ¥è¯¢ï¼š");
 		jRadioButton3.addItemListener(new ClassManager_jRadioButton3_itemAdapter(this));
 		jRadioButton3.addActionListener(new ClassManager_jRadioButton3_actionAdapter(this));
 		jLabel5.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
-		jLabel5.setText("ÇëÑ¡Ôñ×¨Òµ£º");
+		jLabel5.setText("è¯·é€‰æ‹©ä¸“ä¸šï¼š");
 		jComboBox3.setEnabled(false);
 		jComboBox3.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
 		jButton1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
-		jButton1.setText("²é  Ñ¯");
+		jButton1.setText("æŸ¥  è¯¢");
 		jButton1.addActionListener(new ClassManager_jButton1_actionAdapter(this));
 		jButton2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
-		jButton2.setText("²é  Ñ¯");
+		jButton2.setText("æŸ¥  è¯¢");
 		jButton2.addActionListener(new ClassManager_jButton2_actionAdapter(this));
 		jButton3.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
-		jButton3.setText("²é  Ñ¯");
+		jButton3.setText("æŸ¥  è¯¢");
 		jButton3.addActionListener(new ClassManager_jButton3_actionAdapter(this));
 		jScrollPane1.setBorder(BorderFactory.createEtchedBorder());
 		jButton4.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jButton4.setText("ĞŞ  ¸Ä");
+		jButton4.setText("ä¿®  æ”¹");
 		jButton4.addActionListener(new ClassManager_jButton4_actionAdapter(this));
 		jButton5.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jButton5.setText("É¾  ³ı");
+		jButton5.setText("åˆ   é™¤");
 		jButton5.addActionListener(new ClassManager_jButton5_actionAdapter(this));
 		jButton6.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jButton6.setText("·µ  »Ø");
+		jButton6.setText("è¿”  å›");
 		jButton6.addActionListener(new ClassManager_jButton6_actionAdapter(this));
 		jPanel1.add(jRadioButton2, new XYConstraints(20, 50, 125, 25));
 		jPanel1.add(jRadioButton3, new XYConstraints(20, 130, 125, 25));
@@ -147,22 +147,22 @@ public class ClassManager extends JFrame {
 		this.getContentPane().add(jButton4, new XYConstraints(100, 480, 90, 35));
 		this.getContentPane().add(jButton5, new XYConstraints(220, 480, 90, 35));
 		this.getContentPane().add(jButton6, new XYConstraints(340, 480, 90, 35));
-		jComboBox1.addItem("ÇëÑ¡ÔñÑ§Ôº");
-		jComboBox2.addItem("ÇëÑ¡ÔñÑ§Ôº");
+		jComboBox1.addItem("è¯·é€‰æ‹©å­¦é™¢");
+		jComboBox2.addItem("è¯·é€‰æ‹©å­¦é™¢");
 
-		// ÓÃ»§µÈ¼¶ÅĞ¶Ï
-		// 1Îª¹ÜÀíÔ±
+		// ç”¨æˆ·ç­‰çº§åˆ¤æ–­
+		// 1ä¸ºç®¡ç†å‘˜
 		if (MainFrame.level.equals("1")) {
-			// ²»Òş²ØÈÎºÎ¹¦ÄÜ
+			// ä¸éšè—ä»»ä½•åŠŸèƒ½
 		}
-		// 2ÎªÆÕÍ¨ÓÃ»§
+		// 2ä¸ºæ™®é€šç”¨æˆ·
 		else if (MainFrame.level.equals("2")) {
-			// Òş²Ø²¿·Ö¹¦ÄÜ
+			// éšè—éƒ¨åˆ†åŠŸèƒ½
 			jButton4.setVisible(false);
 			jButton5.setVisible(false);
 		}
 
-		// Ñ¡ÔñÑ§Ôº
+		// é€‰æ‹©å­¦é™¢
 		try {
 
 			ResultSet rs = conn.getRs("select * from tb_depart ");
@@ -186,7 +186,7 @@ public class ClassManager extends JFrame {
 		UpdateRecord();
 	}
 
-	// Ñ¡Ôñ´¥·¢
+	// é€‰æ‹©è§¦å‘
 	public void jRadioButton1_actionPerformed(ActionEvent e) {
 		jComboBox1.setEnabled(true);
 		jButton1.setEnabled(true);
@@ -238,11 +238,11 @@ public class ClassManager extends JFrame {
 		UpdateRecord();
 	}
 
-	// °à¼¶ĞŞ¸Ä
+	// ç­çº§ä¿®æ”¹
 	public void jButton4_actionPerformed(ActionEvent e) {
 		getM();
 		if (intRow == -1) {
-			jOptionPane1.showMessageDialog(this, "ÇëÑ¡ÔñÒªĞŞ¸ÄµÄ°à¼¶£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+			jOptionPane1.showMessageDialog(this, "è¯·é€‰æ‹©è¦ä¿®æ”¹çš„ç­çº§ï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 		} else {
 			ClassChange siadd = new ClassChange(find);
 			siadd.setLocation(400, 200);
@@ -254,30 +254,30 @@ public class ClassManager extends JFrame {
 		}
 	}
 
-	// °à¼¶É¾³ı
+	// ç­çº§åˆ é™¤
 	public void jButton5_actionPerformed(ActionEvent e) {
 		getM();
 		if (intRow == -1) {
-			jOptionPane1.showMessageDialog(this, "ÇëÑ¡ÔñÒªÉ¾³ıµÄ°à¼¶£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+			jOptionPane1.showMessageDialog(this, "è¯·é€‰æ‹©è¦åˆ é™¤çš„ç­çº§ï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 		}
 		try {
 			conn.getUpdate("delete from tb_class where classId='" + Integer.valueOf(find) + "'");
-			jOptionPane1.showMessageDialog(this, "É¾³ı³É¹¦£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+			jOptionPane1.showMessageDialog(this, "åˆ é™¤æˆåŠŸï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 		} catch (Exception ce) {
 			System.out.println(ce.getMessage());
 		}
 		UpdateRecord();
 	}
 
-	// ÍË³ö
+	// é€€å‡º
 	public void jButton6_actionPerformed(ActionEvent e) {
 		this.dispose();
 	}
 
-	// Ñ¡Ôñ×¨Òµ
+	// é€‰æ‹©ä¸“ä¸š
 	public void jcb() {
 		jComboBox3.removeAllItems();
-		jComboBox3.addItem("ÇëÑ¡Ôñ×¨Òµ");
+		jComboBox3.addItem("è¯·é€‰æ‹©ä¸“ä¸š");
 		try {
 			ResultSet rs = conn.getRs(
 					"select * from tb_spec where departName='" + String.valueOf(jComboBox2.getSelectedItem()) + "' ");
@@ -291,7 +291,7 @@ public class ClassManager extends JFrame {
 		}
 	}
 
-	// ¸üĞÂ±í¸ñ
+	// æ›´æ–°è¡¨æ ¼
 	public void UpdateRecord() {
 		Object[][] arrTmp = {};
 		Vector vec = new Vector(1, 1);
@@ -323,7 +323,7 @@ public class ClassManager extends JFrame {
 
 	}
 
-	// »ñÈ¡Ñ¡¶¨µÄĞĞ
+	// è·å–é€‰å®šçš„è¡Œ
 	public void getM() {
 		intRow = jTable1.getSelectedRow();
 

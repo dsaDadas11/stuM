@@ -17,11 +17,11 @@ import java.sql.ResultSet;
 import javax.swing.*;
 
 /**
- * 
- * Title: ¿Î³ÌĞŞ¸Ä 
- * Description: ¿Î³ÌĞŞ¸ÄÄ£¿é
- * 
- * @author »Æ²ß£¬³Â×ÓÈ¨£¬µÔÀ¥Ñó£¬ÈÄÈï
+ *
+ * Title: è¯¾ç¨‹ä¿®æ”¹
+ * Description: è¯¾ç¨‹ä¿®æ”¹æ¨¡å—
+ *
+ * @author é»„ç­–ï¼Œé™ˆå­æƒï¼Œç¿Ÿæ˜†æ´‹ï¼Œé¥¶è•Š
  */
 
 public class CourceChange extends JFrame {
@@ -53,21 +53,21 @@ public class CourceChange extends JFrame {
 		getContentPane().setLayout(xYLayout1);
 		xYLayout1.setWidth(500);
 		xYLayout1.setHeight(350);
-		jLabel1.setFont(new java.awt.Font("ĞÂËÎÌå", Font.BOLD, 20));
-		jLabel1.setText("¿Î   ³Ì   ĞŞ   ¸Ä ");
+		jLabel1.setFont(new java.awt.Font("æ–°å®‹ä½“", Font.BOLD, 20));
+		jLabel1.setText("è¯¾   ç¨‹   ä¿®   æ”¹ ");
 		jButton3.addActionListener(new CourceManager_jButton3_actionAdapter(this));
 		jButton1.addActionListener(new CourceManager_jButton1_actionAdapter(this));
 		jTextField2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
 		jComboBox1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
 		jTextField1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
 		jButton3.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
-		jButton3.setText("ÍË    ³ö");
+		jButton3.setText("é€€    å‡º");
 		jButton1.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
-		jButton1.setText("ĞŞ    ¸Ä");
+		jButton1.setText("ä¿®    æ”¹");
 		jLabel5.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
-		jLabel5.setText("Ñ§        ·Ö£º");
+		jLabel5.setText("å­¦        åˆ†ï¼š");
 		jLabel3.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
-		jLabel3.setText("ËùÊô×¨Òµ£º");
+		jLabel3.setText("æ‰€å±ä¸“ä¸šï¼š");
 		this.getContentPane().add(jComboBox1, new XYConstraints(200, 130, 140, 30));
 		this.getContentPane().add(jTextField2, new XYConstraints(200, 180, 140, 30));
 		this.getContentPane().add(jLabel2, new XYConstraints(85, 80, 80, 30));
@@ -78,10 +78,10 @@ public class CourceChange extends JFrame {
 		this.getContentPane().add(jButton1, new XYConstraints(130, 230, 90, 30));
 		this.getContentPane().add(jButton3, new XYConstraints(295, 230, 90, 30));
 		jLabel2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 16));
-		jLabel2.setText("¿Î³ÌÃû³Æ£º");
-		this.setTitle("¿Î³ÌĞŞ¸ÄÓëÉ¾³ı");
-		jComboBox1.addItem("ÇëÑ¡Ôñ");
-		// Ñ¡Ôñ×¨Òµ
+		jLabel2.setText("è¯¾ç¨‹åç§°ï¼š");
+		this.setTitle("è¯¾ç¨‹ä¿®æ”¹ä¸åˆ é™¤");
+		jComboBox1.addItem("è¯·é€‰æ‹©");
+		// é€‰æ‹©ä¸“ä¸š
 		try {
 			ResultSet rs = sta.getRs("select * from tb_spec");
 			while (rs.next()) {
@@ -95,7 +95,7 @@ public class CourceChange extends JFrame {
 		setF();
 	}
 
-	// Ñ¡¶¨ĞĞºóÔÚĞŞ¸Ä½çÃæÏÔÊ¾Ñ¡¶¨Ä¬ÈÏÖµ
+	// é€‰å®šè¡Œååœ¨ä¿®æ”¹ç•Œé¢æ˜¾ç¤ºé€‰å®šé»˜è®¤å€¼
 	public void setF() {
 		if (kefind < 0)
 			return;
@@ -114,12 +114,12 @@ public class CourceChange extends JFrame {
 		}
 	}
 
-	// ÍË³ö
+	// é€€å‡º
 	public void jButton3_actionPerformed(ActionEvent e) {
 		this.dispose();
 	}
 
-	// ĞŞ¸Ä
+	// ä¿®æ”¹
 	public void jButton1_actionPerformed(ActionEvent e) {
 		String keCName, zyName, tName, xueFen;
 		keCName = jTextField1.getText().trim();
@@ -128,7 +128,7 @@ public class CourceChange extends JFrame {
 		try {
 			sta.getUpdate("update tb_cource set courceSpecName='" + zyName + "', courceName='" + keCName
 					+ "',courceHour='" + Float.valueOf(xueFen) + "' where courceId='" + kefind + "'");
-			jOptionPane1.showMessageDialog(this, "¿Î³ÌĞŞ¸Ä³É¹¦£¡", "ÌáÊ¾", JOptionPane.INFORMATION_MESSAGE, null);
+			jOptionPane1.showMessageDialog(this, "è¯¾ç¨‹ä¿®æ”¹æˆåŠŸï¼", "æç¤º", JOptionPane.INFORMATION_MESSAGE, null);
 		} catch (Exception a) {
 			System.out.println(a.getMessage());
 		}
