@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="stuM">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/stuManager.jar!/" />
+      <root url="jar://$PROJECT_DIR$/mysql-connector-java-5.1.18.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JSpaces.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

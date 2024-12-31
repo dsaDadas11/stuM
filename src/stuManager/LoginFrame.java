@@ -17,11 +17,10 @@ import java.net.URL;
 import java.sql.ResultSet;
 
 /**
- * 
- * Title: ��¼ģ�� 
- * Description: ��¼ģ��Ŀ��ӻ�ʵ��
- * 
- * @author 
+ *
+ * Title: 登录模块
+ * Description: 登录模块的可视化实现
+ *
  */
 
 public class LoginFrame extends JFrame {
@@ -58,20 +57,20 @@ public class LoginFrame extends JFrame {
 		contentPane = (JPanel) getContentPane();
 		contentPane.setLayout(null);
 		setSize(new Dimension(504, 344));
-		setTitle("��ӭ��¼ѧ������ϵͳ");
+		setTitle("欢迎登录学生管理系统");
 		jLabel_welcomeTitle.setFont(new java.awt.Font("Dialog", Font.BOLD, 25));
 		jLabel_welcomeTitle.setToolTipText("");
-		jLabel_welcomeTitle.setText("��  ӭ  ��  ¼  ѧ  ��");
+		jLabel_welcomeTitle.setText("欢  迎  登  录  学  生");
 		jLabel_welcomeTitle.setBounds(new Rectangle(128, 19, 246, 30));
 		jLabel_systemTitle.setFont(new java.awt.Font("Dialog", Font.BOLD, 25));
 		jLabel_systemTitle.setToolTipText("");
-		jLabel_systemTitle.setText("��  ��  ϵ  ͳ");
+		jLabel_systemTitle.setText("管  理  系  统");
 		jLabel_systemTitle.setBounds(new Rectangle(173, 61, 164, 29));
 		jLabel_userName.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jLabel_userName.setText("�û���:");
+		jLabel_userName.setText("用户名:");
 		jLabel_userName.setBounds(new Rectangle(95, 123, 77, 25));
 		jLabel_pwd.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jLabel_pwd.setText("��    ��:");
+		jLabel_pwd.setText("密    码:");
 		jLabel_pwd.setBounds(new Rectangle(95, 172, 74, 21));
 		jTextField_userName.setFont(new java.awt.Font("Dialog", Font.PLAIN, 13));
 		jTextField_userName.setBorder(BorderFactory.createLoweredBevelBorder());
@@ -79,22 +78,22 @@ public class LoginFrame extends JFrame {
 		jButton_Login.setBounds(new Rectangle(124, 243, 93, 30));
 		jButton_Login.setFont(new java.awt.Font("Dialog", Font.PLAIN, 13));
 		jButton_Login.setBorder(BorderFactory.createRaisedBevelBorder());
-		jButton_Login.setText("��  ¼");
+		jButton_Login.setText("登  录");
 		jButton_Login.addActionListener(new LoginFrame_jButton_Login_actionAdapter(this));
 		jButton_quit.setBounds(new Rectangle(286, 243, 93, 30));
 		jButton_quit.setFont(new java.awt.Font("Dialog", Font.PLAIN, 13));
 		jButton_quit.setBorder(BorderFactory.createRaisedBevelBorder());
-		jButton_quit.setText("ע  ��");
+		jButton_quit.setText("注  册");
 		jButton_quit.addActionListener(new LoginFrame_jButton_SignUp_actionAdapter(this));
 		jLabel_systemTitle2.setFont(new java.awt.Font("Dialog", Font.BOLD, 25));
 		jLabel_systemTitle2.setForeground(Color.blue);
 		jLabel_systemTitle2.setToolTipText("");
-		jLabel_systemTitle2.setText("��  ��  ϵ  ͳ");
+		jLabel_systemTitle2.setText("管  理  系  统");
 		jLabel_systemTitle2.setBounds(new Rectangle(173, 62, 164, 29));
 		jLabel_welcomeTitle2.setFont(new java.awt.Font("Dialog", Font.BOLD, 25));
 		jLabel_welcomeTitle2.setForeground(Color.blue);
 		jLabel_welcomeTitle2.setToolTipText("");
-		jLabel_welcomeTitle2.setText("��  ӭ  ��  ¼  ѧ  ��");
+		jLabel_welcomeTitle2.setText("欢  迎  登  录  学  生");
 		jLabel_welcomeTitle2.setBounds(new Rectangle(128, 20, 246, 30));
 		jOptionPane_LoginFeedback.setBounds(new Rectangle(28, 263, 262, 90));
 		jOptionPane_LoginFeedback.setLayout(null);
@@ -117,23 +116,23 @@ public class LoginFrame extends JFrame {
 		jPanel_bgBox.add(jLabel_bg, "jLabel8");
 		contentPane.add(jOptionPane_LoginFeedback);
 	}
-	
-	// ����û�ģ��
-		public void jButton_SignUp_actionPerformed(ActionEvent e) {
-			UserAddFrame siadd = new UserAddFrame();
-			siadd.setLocation(400, 200);
-			siadd.setSize(469, 315);
-			siadd.setVisible(true);
-			siadd.setResizable(false);
-			siadd.validate();
-		}
 
-	// ��¼
+	// 添加用户模块
+	public void jButton_SignUp_actionPerformed(ActionEvent e) {
+		UserAddFrame siadd = new UserAddFrame();
+		siadd.setLocation(400, 200);
+		siadd.setSize(469, 315);
+		siadd.setVisible(true);
+		siadd.setResizable(false);
+		siadd.validate();
+	}
+
+	// 登录
 	public void jButton_Login_actionPerformed(ActionEvent e) {
 		boolean cheng = false;
-		// �쳣�ж�
+		// 异常判断
 		if (jTextField_userName.getText().length() == 0) {
-			jOptionPane_LoginFeedback.showMessageDialog(this, "�û�������Ϊ�գ�", "�� ʾ",
+			jOptionPane_LoginFeedback.showMessageDialog(this, "用户名不能为空！", "提 示",
 					jOptionPane_LoginFeedback.INFORMATION_MESSAGE);
 		} else {
 			try {
@@ -157,7 +156,7 @@ public class LoginFrame extends JFrame {
 					}
 				}
 				if (cheng) {
-					jOptionPane_LoginFeedback.showMessageDialog(this, "�û������������", "�� ʾ",
+					jOptionPane_LoginFeedback.showMessageDialog(this, "用户名或密码错误！", "提 示",
 							jOptionPane_LoginFeedback.INFORMATION_MESSAGE);
 				}
 				rs.close();
@@ -166,7 +165,7 @@ public class LoginFrame extends JFrame {
 			}
 		}
 	}
-	
+
 }
 
 class LoginFrame_jButton_Login_actionAdapter implements ActionListener {
