@@ -22,7 +22,7 @@ public class dbConn {
 	private Statement conn() {
 		try {
 			// 加载驱动
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 
 			// 数据库名称，管理员账号、密码
 			String url = "jdbc:mysql://localhost:3306/stuManagerDB";
