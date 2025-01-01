@@ -4,8 +4,6 @@
 
 学生信息管理，包括学生、班级、院系、课程、成绩等的管理。
 
-本程序仅供学习食用。（¯﹃¯）
-
 ## 工程环境
 
 * [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
@@ -20,7 +18,7 @@
     * 数据库端口：3306
     * 数据库名：stuManagerDB
     * 数据库用户名：root
-    * 数据库密码：123
+    * 数据库密码：123456
 3. 满足以上条件下运行`stuManager.jar`则可以运行系统。
 
 ## 登录说明
