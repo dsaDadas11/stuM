@@ -14,7 +14,7 @@
 
 1. 本程序是Runable JAR文件，需安装JRE才可运行。  
 [Java SE Runtime Environment 8 Downloads](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
-2. 本程序使用MySQL数据库，使用前请导入[DumpStructureOnly.sql](database/DumpStructureOnly.sql)（数据库结构文件）或者[DumpStructure_and_Data.sql](database/DumpStructure_and_Data.sql)（带有测试数据的数据库文件）进MySQL，并设置如下（可在`dbConn.java`修改）：
+2. 本程序使用MySQL数据库，使用前请导入[DumpStructure_and_Data.sql](database/DumpStructure_and_Data.sql)（带有测试数据的数据库文件）进MySQL，并设置如下（可在`dbConn.java`修改）：
     * 数据库端口：3306
     * 数据库名：stuManagerDB
     * 数据库用户名：root
@@ -29,7 +29,7 @@
 
 ## 运行截图
 
-![stuManagerScreenshot](https://huihut-img.oss-cn-shenzhen.aliyuncs.com/stuManageScreenshot.jpg)
+![stuManagerScreenshot](/src/img/stuManageScreenshot.jpg)
 
 ## 系统功能结构
 
@@ -37,4 +37,4 @@
 
 ## 数据库结构（E-R图）
 
-![DatabaseStructure](https://huihut-img.oss-cn-shenzhen.aliyuncs.com/DatabaseERDiagram.png)
+![DatabaseStructure](/src/img/DatabaseERDiagram.jpg)
