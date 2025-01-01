@@ -33,7 +33,7 @@
 
 ## 系统功能结构
 
-![SystemFunctionStructure](https://huihut-img.oss-cn-shenzhen.aliyuncs.com/SystemFunctionStructure.jpg)
+![SystemFunctionStructure](/src/img/str.jpg)
 
 ## 数据库结构（E-R图）
 
